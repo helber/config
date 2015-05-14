@@ -42,6 +42,9 @@ PATH=$GOPATH/bin:$PATH
 . /home/helber/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
 PATH=$PATH:$HOME/.opam/system/bin
 
+# Scala
+SCALA_HOME=/mnt/projetos/shareapps/scala-2.11.6
+PATH=$SCALA_HOME/bin:$PATH
 
 coreos_casa () {
     # Fleet (Docker)

@@ -16,9 +16,3 @@ NeoBundle "altercation/vim-colors-solarized"
 
 " Git NerdTree
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-
-" Gruvbox theme
-NeoBundle 'morhetz/gruvbox'
-
-" Seoul256 theme
-NeoBundle 'junegunn/seoul256.vim'

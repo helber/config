@@ -1,0 +1,56 @@
+set shell=/bin/bash
+
+" let g:python_host_prog='/bin/python2'
+
+set expandtab shiftwidth=4 tabstop=8 colorcolumn=99 softtabstop=4 smartindent
+" Maps Alt-[h,j,k,l] to resizing a window split
+map <silent> <C-h> <c-w>>
+map <silent> <C-l> <c-w><
+map <silent> <C-j> <c-w>-
+map <silent> <C-k> <c-w>+
+
+" vim-python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=99
+      \ formatoptions+=croq softtabstop=4 smartindent autoindent
+      \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
+
+let g:NERDTreeWinSize=20
+" let g:NERDTreeMapOpenInTabSilent='<RightMouse>'
+let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
+
+" let g:rehash256=1
+colorscheme jellybeans
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+end
+set mouse=n
+
+
+" vim-airline
+
+let g:airline_symbols = {}
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+" let g:airline_theme = 'jellybeans'
+let g:airline_theme = 'tomorrow'
+
+if filereadable(".vimrc.proj")
+    source .vimrc.proj
+endif
+
+

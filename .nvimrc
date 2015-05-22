@@ -6,16 +6,16 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 
   " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.nvim/bundle/neobundle.vim/
 endif
 
-let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+let neobundle_readme=expand('~/.nvim/bundle/neobundle.vim/README.md')
 
 if !filereadable(neobundle_readme)
   echo "Installing NeoBundle..."
   echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
+  silent !mkdir -p ~/.nvim/bundle
+  silent !git clone https://github.com/Shougo/neobundle.vim ~/.nvim/bundle/neobundle.vim/
   let g:not_finsh_neobundle = "yes"
 
   " Run shell script if exist on custom select language
@@ -37,7 +37,7 @@ if !filereadable(neobundle_readme)
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.nvim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -83,7 +83,7 @@ NeoBundle 'tomasr/molokai'
 NeoBundle 'sherzberg/vim-bootstrap-updater'
 
 let g:vim_bootstrap_langs = "javascript,elixir,python,c,html,go,erlang"
-let g:vim_bootstrap_editor = "vim"				" nvim or vim
+let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
 "" Custom bundles
 
@@ -123,8 +123,8 @@ NeoBundle "jimenezrick/vimerl"
 
 
 "" Include user's extra bundle
-if filereadable(expand("~/.vimrc.local.bundles"))
-  source ~/.vimrc.local.bundles
+if filereadable(expand("~/.nvimrc.local.bundles"))
+  source ~/.nvimrc.local.bundles
 endif
 
 call neobundle#end()
@@ -168,7 +168,7 @@ set smartcase
 "" Encoding
 set bomb
 set binary
-set ttyfast
+
 
 "" Directories for swp files
 set nobackup
@@ -179,7 +179,7 @@ set showcmd
 set shell=/bin/sh
 
 " session management
-let g:session_directory = "~/.vim/session"
+let g:session_directory = "~/.nvim/session"
 let g:session_autoload = "no"
 let g:session_autosave = "no"
 let g:session_command_aliases = 1
@@ -522,6 +522,6 @@ let erlang_show_errors = 1
 
 
 "" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
+if filereadable(expand("~/.nvimrc.local"))
+  source ~/.nvimrc.local
 endif

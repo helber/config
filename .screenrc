@@ -15,7 +15,7 @@ nethack on
 setenv LC_CTYPE en_US.UTF-8
 defutf8 on
 
-escape ^\\
+# escape ^\\
 
  # terminfo and termcap for nice 256 color terminal
 # allow bold colors - necessary for some reason

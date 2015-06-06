@@ -2,10 +2,10 @@ set shell=/bin/bash
 
 set expandtab shiftwidth=4 tabstop=8 colorcolumn=99 softtabstop=4 smartindent
 " Maps Alt-[h,j,k,l] to resizing a window split
-map <silent> <C-h> <c-w>>
-map <silent> <C-l> <c-w><
-map <silent> <C-j> <c-w>-
-map <silent> <C-k> <c-w>+
+" map <silent> <C-h> <c-w>>
+" map <silent> <C-l> <c-w><
+" map <silent> <C-j> <c-w>-
+" map <silent> <C-k> <c-w>+
 
 " vim-python
 augroup vimrc-python
@@ -19,7 +19,7 @@ if has("autocmd")
     filetype on
     " yaml
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
-    autocmd FileType make setlocal ts=8 sts=8 sw=8 et
+    " autocmd FileType make setlocal ts=8 sts=8 sw=8 et
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet
 endif
 
@@ -28,7 +28,8 @@ let g:NERDTreeWinSize=20
 let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
 
 " let g:rehash256=1
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme rdark-terminal
 if has("mouse_sgr")
     set ttymouse=sgr
 else
@@ -64,4 +65,10 @@ if filereadable(".vimrc.proj")
     source .vimrc.proj
 endif
 
+" session management
+nnoremap <leader>so :OpenSession<Space>
+nnoremap <leader>ss :SaveSession<Space>
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
 
+" let mapleader = "\<Space>"

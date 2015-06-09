@@ -28,14 +28,17 @@ let g:NERDTreeWinSize=20
 let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
 
 " let g:rehash256=1
-" colorscheme jellybeans
-colorscheme rdark-terminal
+colorscheme jellybeans
+" colorscheme rdark-terminal
 if has("mouse_sgr")
     set ttymouse=sgr
 else
     set ttymouse=xterm2
 end
-set mouse=n
+" set mouse=n
+set mouse=a
+set ttyfast
+set clipboard=unnamedplus
 
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬
@@ -58,8 +61,8 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-" let g:airline_theme = 'jellybeans'
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'jellybeans'
+" let g:airline_theme = 'tomorrow'
 
 if filereadable(".vimrc.proj")
     source .vimrc.proj

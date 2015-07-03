@@ -81,6 +81,17 @@ p-portabilidade () {
     source .hproject
 }
 
+p-cianet-cluster () {
+    cd /mnt/projetos/ativos/cianet/automacao/cianetcluster
+    source .hproject
+}
+
+e-angular () {
+    cd /mnt/projetos/ativos/projetos/javascript/angular/listaTelefonica
+    source .hproject
+}
+
+
 # Define o vim como editor
 export EDITOR=vim
 

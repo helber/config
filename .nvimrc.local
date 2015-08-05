@@ -1,13 +1,11 @@
 set shell=/bin/bash
 
-" let g:python_host_prog='/bin/python2'
-
 set expandtab shiftwidth=4 tabstop=8 colorcolumn=99 softtabstop=4 smartindent
 " Maps Alt-[h,j,k,l] to resizing a window split
-map <silent> <C-h> <c-w>>
-map <silent> <C-l> <c-w><
-map <silent> <C-j> <c-w>-
-map <silent> <C-k> <c-w>+
+" map <silent> <C-h> <c-w>>
+" map <silent> <C-l> <c-w><
+" map <silent> <C-j> <c-w>-
+" map <silent> <C-k> <c-w>+
 
 " vim-python
 augroup vimrc-python
@@ -17,22 +15,37 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
+if has("autocmd")
+    filetype on
+    " yaml
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
+    " autocmd FileType make setlocal ts=8 sts=8 sw=8 et
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet
+endif
+
 let g:NERDTreeWinSize=20
 " let g:NERDTreeMapOpenInTabSilent='<RightMouse>'
 let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
 
 " let g:rehash256=1
 colorscheme jellybeans
+" colorscheme rdark-terminal
 if has("mouse_sgr")
     set ttymouse=sgr
-else
-    set ttymouse=xterm2
 end
-set mouse=n
+" set mouse=n
+set mouse=a
+set ttyfast
+set clipboard=unnamedplus
+
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+" Invisible character colors
+"highlight NonText guifg=#4a4a59
+"highlight SpecialKey guifg=#4a4a59
 
 
 " vim-airline
-
 let g:airline_symbols = {}
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#left_sep = ''
@@ -46,11 +59,17 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-" let g:airline_theme = 'jellybeans'
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'jellybeans'
+" let g:airline_theme = 'tomorrow'
 
 if filereadable(".vimrc.proj")
     source .vimrc.proj
 endif
 
+" session management
+nnoremap <leader>so :OpenSession<Space>
+nnoremap <leader>ss :SaveSession<Space>
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
 
+" let mapleader = "\<Space>"

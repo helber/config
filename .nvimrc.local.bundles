@@ -1,7 +1,6 @@
 
 NeoBundle "ekalinin/Dockerfile.vim"
 
-NeoBundle "Shougo/vimproc.vim"
 NeoBundle "vim-scripts/Vebugger"
 " :call vebugger#pdb#start('manager.py', {'args':['runserver']})
 " :VBGstartPDB2 manage.py runserver
@@ -10,9 +9,28 @@ NeoBundle "vim-scripts/Vebugger"
 " NeoBundle "jmcantrell/vim-virtualenv"
 NeoBundle "stephpy/vim-yaml"
 
+" Tmux
+NeoBundle 'sheerun/tmux.vim'
+
 NeoBundle "othree/html5.vim"
-NeoBundle "nanotech/jellybeans.vim"
-NeoBundle "altercation/vim-colors-solarized"
 
 " Git NerdTree
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+
+" Colorscheme Themes -------------------->
+NeoBundle "nanotech/jellybeans.vim"
+NeoBundle "altercation/vim-colors-solarized"
+" Gruvbox theme
+NeoBundle 'morhetz/gruvbox'
+" Seoul256 theme
+NeoBundle 'junegunn/seoul256.vim'
+" Colorschema
+NeoBundle 'flazz/vim-colorschemes'
+
+
+" Systemd
+NeoBundle 'kurayama/systemd-vim-syntax'
+
+" Vinegar
+NeoBundle 'tpope/vim-vinegar'
+

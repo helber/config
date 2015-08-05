@@ -53,6 +53,7 @@ coreos_casa () {
     export FLEETCTL_TUNNEL=${ETCD_HOST}:22
     export ETCDCTL_PEERS=http://${ETCD_HOST}:4001
     export FLEETCTL_EXPERIMENTAL_API=false
+    export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001
     # export FLEETCTL_TUNNEL=10.0.0.10:2200
 }
 coreos_cianet () {
@@ -62,6 +63,7 @@ coreos_cianet () {
     export FLEETCTL_TUNNEL=${ETCD_HOST}:22
     export ETCDCTL_PEERS=http://${ETCD_HOST}:4001
     export FLEETCTL_EXPERIMENTAL_API=false
+    export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001
 }
 export FLEETCTL_STRICT_HOST_KEY_CHECKING=false
 coreos_cianet
@@ -116,3 +118,8 @@ source /usr/share/git-core/contrib/completion/git-prompt.sh
 export PS1='\[\e[01;30m\]`if [ $? = 0 ]; then echo "\[\e[32m\]✔ "; else echo "\[\e[31m\]✘ "; fi`\[\e[00;37m\]\u\[\e[01;37m\]:`[[ $(git status 2> /dev/null | head -n3 | tail -n1) != "Changes not staged for commit:" ]] && echo "\[\e[31m\]" || echo "\[\e[33m\]"``[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] || echo "\[\e[32m\]"`$(__git_ps1 "(%s)\[\e[00m\]")\[\e[01;34m\]\W\[\e[00m\]\$ '
 
 export PATH
+
+export NVM_DIR="/home/helber/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+

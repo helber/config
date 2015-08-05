@@ -29,5 +29,6 @@
     c = commit -v
     graph = log --graph --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset'
     sumario = log --pretty=format:'* %Cred%h%Creset [%ad] %C(yellow)%s%Creset'
+    tagl = log --date-order --graph --tags --simplify-by-decoration --pretty=format:'%ai %h %d'
 [push]
     default = matching

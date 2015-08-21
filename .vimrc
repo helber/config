@@ -11,7 +11,7 @@ endif
 
 let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = "javascript,elixir,python,c,html,go,erlang"
+let g:vim_bootstrap_langs = "javascript,python,c,html,go"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -22,10 +22,6 @@ if !filereadable(neobundle_readme)
   let g:not_finsh_neobundle = "yes"
 
   " Run shell script if exist on custom select language
-  
-  
-  
-  
   
   
   
@@ -95,14 +91,19 @@ endif
 
 "" Custom bundles
 
-NeoBundle 'vim-scripts/c.vim'
-
-
 "" Python Bundle
 NeoBundle "davidhalter/jedi-vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "majutsushi/tagbar"
 NeoBundle "Yggdroot/indentLine"
+
+
+"" Go Lang Bundle
+NeoBundle "majutsushi/tagbar"
+NeoBundle "fatih/vim-go"
+
+
+NeoBundle 'vim-scripts/c.vim'
 
 
 "" Javascript Bundle
@@ -115,18 +116,6 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'mattn/emmet-vim'
-
-
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'carlosgaldino/elixir-snippets'
-
-
-"" Go Lang Bundle
-NeoBundle "majutsushi/tagbar"
-NeoBundle "fatih/vim-go"
-
-
-NeoBundle "jimenezrick/vimerl"
 
 
 
@@ -494,11 +483,6 @@ noremap ,o :!echo `git url`/blob/`git rev-parse --abbrev-ref HEAD`/%\#L<C-R>=lin
 
 "" Custom configs
 
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
-
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -524,16 +508,6 @@ let g:syntastic_python_flake8_post_args='--ignore=W391'
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
-
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
-
-let g:javascript_enable_domhtmlcss = 1
-
-
-
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
@@ -573,8 +547,14 @@ augroup FileType go
 augroup END
 
 
-let erlang_folding = 1
-let erlang_show_errors = 1
+" Tagbar
+nmap <silent> <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+
+
+let g:javascript_enable_domhtmlcss = 1
+
+
 
 
 

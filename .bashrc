@@ -35,12 +35,14 @@ PATH=$PATH:/mnt/projetos/shareapps/android/adt-bundle-linux-x86_64-20140321/sdk/
 PATH=/mnt/projetos/shareapps/bin:$PATH
 
 # go-lang
-export GOPATH=/mnt/projetos/shareapps/go
+export GOROOT=/mnt/projetos/shareapps/go-1.5
+PATH=$PATH:$GOROOT/bin
+export GOPATH=/mnt/projetos/shareapps/gopath
 PATH=$GOPATH/bin:$PATH
 
 # OPAM configuration
-. /home/helber/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-PATH=$PATH:$HOME/.opam/system/bin
+# . /home/helber/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+# PATH=$PATH:$HOME/.opam/system/bin
 
 # Scala
 SCALA_HOME=/mnt/projetos/shareapps/scala-2.11.6
@@ -85,6 +87,16 @@ p-portabilidade () {
 
 p-cianet-cluster () {
     cd /mnt/projetos/ativos/cianet/automacao/cianetcluster
+    source .hproject
+}
+
+e-golang () {
+    cd /mnt/projetos/ativos/projetos/golang
+    source .hproject
+}
+
+e-pydata () {
+    cd /mnt/projetos/ativos/projetos/python/python4dataanalysis
     source .hproject
 }
 

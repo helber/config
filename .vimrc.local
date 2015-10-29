@@ -24,7 +24,8 @@ let g:NERDTreeWinSize=20
 let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
 
 " let g:rehash256=1
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme molokai
 " colorscheme rdark-terminal
 if has("mouse_sgr")
     set ttymouse=sgr
@@ -52,4 +53,17 @@ nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
+vnoremap p "_dP
+
 " let mapleader="\<Space>"
+nnoremap <c-n> :lnext<CR>
+nnoremap <c-N> :lprevious<CR>
+
+:nnoremap <F5> :buffers<CR>:buffer<Space>

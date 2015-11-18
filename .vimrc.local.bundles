@@ -6,7 +6,7 @@ NeoBundle "ekalinin/Dockerfile.vim"
 " :VBGstartPDB2 manage.py runserver
 " :VBGcontinue
 
-NeoBundle "stephpy/vim-yaml"
+" NeoBundle "stephpy/vim-yaml"
 
 " Tmux
 NeoBundle 'sheerun/tmux.vim'
@@ -33,3 +33,6 @@ NeoBundle 'kurayama/systemd-vim-syntax'
 " Vinegar
 " NeoBundle 'tpope/vim-vinegar'
 
+" go-explorer
+NeoBundle 'garyburd/go-explorer'
+" NeoBundle 'Valloric/YouCompleteMe'

@@ -52,7 +52,7 @@ coreos_casa () {
     # Fleet (Docker)
     export ETCD_HOST=10.0.0.9
     export FLEETCTL_ENDPOINT=http://${ETCD_HOST}:4001
-    export FLEETCTL_TUNNEL=${ETCD_HOST}:22
+    # export FLEETCTL_TUNNEL=${ETCD_HOST}:22
     export ETCDCTL_PEERS=http://${ETCD_HOST}:4001
     export FLEETCTL_EXPERIMENTAL_API=false
     export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001
@@ -62,7 +62,7 @@ coreos_cianet () {
     # Fleet (Docker)
     export ETCD_HOST=10.5.10.11
     export FLEETCTL_ENDPOINT=http://${ETCD_HOST}:4001
-    export FLEETCTL_TUNNEL=${ETCD_HOST}:22
+    # export FLEETCTL_TUNNEL=${ETCD_HOST}:22
     export ETCDCTL_PEERS=http://${ETCD_HOST}:4001
     export FLEETCTL_EXPERIMENTAL_API=false
     export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001
@@ -72,6 +72,11 @@ coreos_cianet
 
 p-autosan () {
     cd /mnt/projetos/ativos/django/autosan
+    source .hproject
+}
+
+p-iot () {
+    cd /mnt/projetos/ativos/cianet/documentacoes/apresentacoes/apresentacao-iot
     source .hproject
 }
 
@@ -133,5 +138,4 @@ export PATH
 
 export NVM_DIR="/home/helber/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 

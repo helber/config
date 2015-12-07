@@ -1,11 +1,6 @@
 set shell=/bin/bash
 
 set expandtab shiftwidth=4 tabstop=8 colorcolumn=99 softtabstop=4 smartindent
-" Maps Alt-[h,j,k,l] to resizing a window split
-" map <silent> <C-h> <c-w>>
-" map <silent> <C-l> <c-w><
-" map <silent> <C-j> <c-w>-
-" map <silent> <C-k> <c-w>+
 
 " vim-python
 augroup vimrc-python
@@ -20,7 +15,8 @@ if has("autocmd")
     " yaml
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
     " autocmd FileType make setlocal ts=8 sts=8 sw=8 et
-    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noet
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
+    autocmd FileType html setlocal ts=4 sts=4 sw=4 et
 endif
 
 let g:NERDTreeWinSize=20
@@ -28,10 +24,13 @@ let g:NERDTreeWinSize=20
 let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
 
 " let g:rehash256=1
-colorscheme jellybeans
+" colorscheme jellybeans
+colorscheme molokai
 " colorscheme rdark-terminal
 if has("mouse_sgr")
     set ttymouse=sgr
+else
+    set ttymouse=xterm2
 end
 " set mouse=n
 set mouse=a
@@ -44,24 +43,6 @@ set listchars=tab:▸\ ,eol:¬
 "highlight NonText guifg=#4a4a59
 "highlight SpecialKey guifg=#4a4a59
 
-
-" vim-airline
-let g:airline_symbols = {}
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-let g:airline_theme = 'jellybeans'
-" let g:airline_theme = 'tomorrow'
-
 if filereadable(".vimrc.proj")
     source .vimrc.proj
 endif
@@ -72,4 +53,17 @@ nnoremap <leader>ss :SaveSession<Space>
 nnoremap <leader>sd :DeleteSession<CR>
 nnoremap <leader>sc :CloseSession<CR>
 
-" let mapleader = "\<Space>"
+" delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap <leader>p "_dP
+vnoremap p "_dP
+
+" let mapleader="\<Space>"
+nnoremap <c-n> :lnext<CR>
+nnoremap <c-N> :lprevious<CR>
+
+:nnoremap <F5> :buffers<CR>:buffer<Space>

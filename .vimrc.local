@@ -63,7 +63,8 @@ vnoremap <leader>p "_dP
 vnoremap p "_dP
 
 " let mapleader="\<Space>"
-nnoremap <c-n> :lnext<CR>
-nnoremap <c-N> :lprevious<CR>
+" nnoremap <c-n> :lnext<CR>
+" nnoremap <c-N> :lprevious<CR>
 
-:nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <F5> :buffers<CR>:buffer<Space>
+

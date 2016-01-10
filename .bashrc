@@ -75,6 +75,11 @@ p-autosan () {
     source .hproject
 }
 
+p-cordova () {
+    cd /mnt/projetos/ativos/projetos/cordova/haftecmon
+    source .hproject
+}
+
 p-iot () {
     cd /mnt/projetos/ativos/cianet/documentacoes/apresentacoes/apresentacao-iot
     source .hproject
@@ -139,3 +144,7 @@ export PATH
 export NVM_DIR="/home/helber/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+
+NFPSE_PRODUCAO_VERSION=1.6.0.5;export NFPSE_PRODUCAO_VERSION; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C
+
+NFPSE_PRODUCAO_PATH="/home/helber/.pmf/NFPSePRODUCAO";export NFPSE_PRODUCAO_PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C

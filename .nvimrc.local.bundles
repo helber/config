@@ -35,4 +35,8 @@ NeoBundle 'kurayama/systemd-vim-syntax'
 
 " go-explorer
 NeoBundle 'garyburd/go-explorer'
-" NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'fatih/vim-go'
+
+" Surround
+NeoBundle 'tpope/vim-surround'

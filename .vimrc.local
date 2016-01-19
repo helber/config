@@ -43,10 +43,6 @@ set listchars=tab:▸\ ,eol:¬
 "highlight NonText guifg=#4a4a59
 "highlight SpecialKey guifg=#4a4a59
 
-if filereadable(".vimrc.proj")
-    source .vimrc.proj
-endif
-
 " session management
 nnoremap <leader>so :OpenSession<Space>
 nnoremap <leader>ss :SaveSession<Space>
@@ -57,7 +53,11 @@ nnoremap <leader>sc :CloseSession<CR>
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
+" My custom ctrlp
 let g:ctRLP_Custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|tox|ico|git|hg|svn))$'
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore '+ g:ctrlp_custom_ignore +' -g ""'
+endif
 
 " replace currently selected text with default register
 " without yanking it
@@ -91,3 +91,9 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 " let g:go_highlight_build_constraints = 1
 " 
 " let g:go_fmt_command = "goimports"
+
+" include vimrc project file
+if filereadable(".vimrc.proj")
+    source .vimrc.proj
+endif
+

@@ -57,6 +57,8 @@ nnoremap <leader>sc :CloseSession<CR>
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
+let g:ctRLP_Custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|tox|ico|git|hg|svn))$'
+
 " replace currently selected text with default register
 " without yanking it
 vnoremap <leader>p "_dP

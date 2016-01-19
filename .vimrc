@@ -1,7 +1,6 @@
 "*****************************************************************************
 "" NeoBundle core
 "*****************************************************************************
-
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
@@ -22,17 +21,6 @@ if !filereadable(neobundle_readme)
   let g:not_finsh_neobundle = "yes"
 
   " Run shell script if exist on custom select language
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 endif
 
 " Required:
@@ -46,6 +34,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "" NeoBundle install packages
 "*****************************************************************************
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'jistr/vim-nerdtree-tabs.git'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
@@ -56,6 +45,8 @@ NeoBundle 'vim-scripts/grep.vim'
 NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc.vim', {
       \ 'build' : {
       \     'windows' : 'tools\\update-dll-mingw',
@@ -91,22 +82,15 @@ NeoBundle 'sherzberg/vim-bootstrap-updater'
 
 "" Python Bundle
 NeoBundle "davidhalter/jedi-vim"
-NeoBundle "scrooloose/syntastic"
-NeoBundle "majutsushi/tagbar"
 NeoBundle "Yggdroot/indentLine"
 
-
 "" Go Lang Bundle
-NeoBundle "majutsushi/tagbar"
 NeoBundle "fatih/vim-go"
-
 
 NeoBundle 'vim-scripts/c.vim'
 
-
 "" Javascript Bundle
-NeoBundle "scrooloose/syntastic"
-
+NeoBundle 'jelera/vim-javascript-syntax'
 
 "" HTML Bundle
 NeoBundle 'amirh/HTML-AutoCloseTag'
@@ -114,8 +98,6 @@ NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'gorodinskiy/vim-coloresque'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'mattn/emmet-vim'
-
-
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -244,6 +226,7 @@ let g:airline_theme = 'powerlineish'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
 
 "*****************************************************************************
 "" Abbreviations
@@ -372,11 +355,15 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|tox|ico|git|hg|svn))$'
 let g:ctrlp_user_command = "find %s -type f | grep -Ev '"+ g:ctrlp_custom_ignore +"'"
-let g:ctrlp_use_caching = 0
+let g:ctrlp_use_caching = 1
 cnoremap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 noremap <leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<leader>e'
 let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -393,6 +380,9 @@ let g:syntastic_style_warning_symbol = '⚠'
 let g:syntastic_auto_loc_list=1
 let g:syntastic_aggregate_errors = 1
 
+" Tagbar
+nmap <silent> <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
 
 " Disable visualbell
 set visualbell t_vb=
@@ -467,16 +457,7 @@ let g:syntastic_python_flake8_post_args='--ignore=W391'
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
 
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
-
-
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
 
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
@@ -507,15 +488,16 @@ augroup FileType go
 augroup END
 
 
-" Tagbar
-nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
+
 
 
 let g:javascript_enable_domhtmlcss = 1
 
-
-
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4 smartindent
+augroup END
 
 
 "" Include user's local vim config
@@ -562,3 +544,4 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+

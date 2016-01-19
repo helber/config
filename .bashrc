@@ -17,6 +17,7 @@ export WORKON_HOME
 source /usr/bin/virtualenvwrapper.sh
 
 JAVA_HOME="/usr/java/latest/"
+# JAVA_HOME="/usr/lib/jvm/jre/"
 export JAVA_HOME
 #JRE_HOME="$JAVA_HOME/jre"
 JRE_HOME="$JAVA_HOME"
@@ -45,8 +46,8 @@ PATH=$GOPATH/bin:$PATH
 # PATH=$PATH:$HOME/.opam/system/bin
 
 # Scala
-SCALA_HOME=/mnt/projetos/shareapps/scala-2.11.6
-PATH=$SCALA_HOME/bin:$PATH
+# SCALA_HOME=/mnt/projetos/shareapps/scala-2.11.6
+# PATH=$SCALA_HOME/bin:$PATH
 
 coreos_casa () {
     # Fleet (Docker)
@@ -76,7 +77,7 @@ p-autosan () {
 }
 
 p-cordova () {
-    cd /mnt/projetos/ativos/projetos/cordova/haftecmon
+    cd /mnt/projetos/ativos/projetos/cordova
     source .hproject
 }
 
@@ -101,7 +102,7 @@ p-cianet-cluster () {
 }
 
 e-golang () {
-    cd /mnt/projetos/ativos/projetos/golang
+    cd /mnt/projetos/shareapps/gopath
     source .hproject
 }
 
@@ -115,6 +116,8 @@ e-angular () {
     source .hproject
 }
 
+# ESP8266
+# export PATH=/mnt/projetos/ativos/projetos/embedded/esp8266/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 
 # Define o vim como editor
 export EDITOR=vim
@@ -124,6 +127,9 @@ PATH="/mnt/projetos/shareapps/vim/bin:$PATH"
 
 # Neovim compilado
 PATH="/mnt/projetos/shareapps/neovim/bin:$PATH"
+
+# TMUX compilado
+# PATH="/mnt/projetos/shareapps/tmux/bin:$PATH"
 
 # Powerline shell
 #POWERLINE_BASH_CONTINUATION=1

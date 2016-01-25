@@ -40,3 +40,6 @@ NeoBundle 'kurayama/systemd-vim-syntax'
 
 " Surround
 NeoBundle 'tpope/vim-surround'
+
+" Buffer Kill
+NeoBundle 'qpkorr/vim-bufkill'

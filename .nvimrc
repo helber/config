@@ -10,7 +10,7 @@ endif
 
 let neobundle_readme=expand('~/.config/nvim/bundle/neobundle.vim/README.md')
 
-let g:vim_bootstrap_langs = "javascript,python,html,go,c"
+let g:vim_bootstrap_langs = "javascript,python,c,html,go"
 let g:vim_bootstrap_editor = "nvim"				" nvim or vim
 
 if !filereadable(neobundle_readme)
@@ -38,7 +38,8 @@ NeoBundle 'jistr/vim-nerdtree-tabs.git'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'vim-scripts/grep.vim'

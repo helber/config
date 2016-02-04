@@ -10,6 +10,7 @@ augroup vimrc-python
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
+" let g:jedi#force_py_version = 2
 if has("autocmd")
     filetype on
     " yaml
@@ -68,6 +69,7 @@ vnoremap p "_dP
 " nnoremap <c-n> :lnext<CR>
 " nnoremap <c-N> :lprevious<CR>
 
+noremap <leader>c :BD<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " au FileType go nmap <leader>r <Plug>(go-run)
@@ -91,6 +93,13 @@ nnoremap <F5> :buffers<CR>:buffer<Space>
 " let g:go_highlight_build_constraints = 1
 " 
 " let g:go_fmt_command = "goimports"
+
+" clang_complete
+" let g:syntastic_python_python_exec = 'python3'
+" let g:clang_complete_auto=1
+" let g:clang_library_path='/usr/lib64/llvm/'
+" let g:clang_complete_macros = 1
+" let g:acp_behaviorKeywordLength = 5
 
 " include vimrc project file
 if filereadable(".vimrc.proj")

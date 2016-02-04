@@ -11,6 +11,7 @@ NeoBundle "ekalinin/Dockerfile.vim"
 " Tmux
 NeoBundle 'sheerun/tmux.vim'
 
+" HTML5
 NeoBundle "othree/html5.vim"
 
 " Git NerdTree
@@ -43,3 +44,9 @@ NeoBundle 'tpope/vim-surround'
 
 " Buffer Kill
 NeoBundle 'qpkorr/vim-bufkill'
+
+" airline-themes
+" NeoBundle 'vim-airline/vim-airline-themes'
+
+" clang_complete
+" NeoBundle 'Rip-Rip/clang_complete'

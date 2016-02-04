@@ -76,13 +76,18 @@ p-autosan () {
     source .hproject
 }
 
-p-cordova () {
-    cd /mnt/projetos/ativos/projetos/cordova
+p-platformio () {
+    cd /mnt/projetos/ativos/projetos/platformio
     source .hproject
 }
 
-p-iot () {
-    cd /mnt/projetos/ativos/cianet/documentacoes/apresentacoes/apresentacao-iot
+p-vod () {
+    cd /mnt/projetos/ativos/cianet/vod-hls
+    source .hproject
+}
+
+p-cordova () {
+    cd /mnt/projetos/ativos/projetos/cordova
     source .hproject
 }
 

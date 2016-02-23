@@ -28,6 +28,7 @@ let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
 " colorscheme jellybeans
 colorscheme molokai
 " colorscheme rdark-terminal
+let g:airline_theme = 'dark'
 if has("mouse_sgr")
     set ttymouse=sgr
 else

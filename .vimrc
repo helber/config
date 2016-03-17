@@ -76,11 +76,10 @@ NeoBundle 'honza/vim-snippets'
 "" Color
 NeoBundle 'tomasr/molokai'
 
-"" Vim-Bootstrap Updater
-NeoBundle 'sherzberg/vim-bootstrap-updater'
+"" Vim-Bootstrap Updater by sherzberg
+NeoBundle 'avelino/vim-bootstrap-updater'
 
 "" Custom bundles
-
 "" Python Bundle
 NeoBundle "davidhalter/jedi-vim"
 NeoBundle "Yggdroot/indentLine"

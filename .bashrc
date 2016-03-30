@@ -59,11 +59,22 @@ coreos_casa () {
     export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001
     # export FLEETCTL_TUNNEL=10.0.0.10:2200
 }
-coreos_cianet () {
+coreos_cianet_old () {
     # Fleet (Docker)
-    export ETCD_HOST=10.5.10.11
+    export ETCD_HOST=10.5.20.11
     export FLEETCTL_ENDPOINT=http://${ETCD_HOST}:4001
     # export FLEETCTL_TUNNEL=${ETCD_HOST}:22
+    export ETCDCTL_PEERS=http://${ETCD_HOST}:4001
+    export FLEETCTL_EXPERIMENTAL_API=false
+    export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001
+}
+coreos_cianet () {
+    # Fleet (Docker)
+    export ETCD_HOST=10.6.0.11
+    export FLEETCTL_ENDPOINT=http://${ETCD_HOST}:4001
+    # export FLEETCTL_TUNNEL=${ETCD_HOST}:22
+    # export ETCD_DISCOVERY="https://discovery.etcd.io/13ef59019476ed0b024774eaa10b191d"
+    # export ETCDCTL_PEERS="http://10.6.0.11:2380,http://10.6.0.11:7001"
     export ETCDCTL_PEERS=http://${ETCD_HOST}:4001
     export FLEETCTL_EXPERIMENTAL_API=false
     export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001

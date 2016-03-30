@@ -42,7 +42,7 @@ set clipboard=unnamedplus
 nmap <leader>l :set list!<CR>
 " set listchars=space:\.,tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
 if v:version >= 74
-    set listchars=space:\.,tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
+    set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
 else
     set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
 endif

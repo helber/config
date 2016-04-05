@@ -36,7 +36,7 @@ PATH=$PATH:/mnt/projetos/shareapps/android/adt-bundle-linux-x86_64-20140321/sdk/
 PATH=/mnt/projetos/shareapps/bin:$PATH
 
 # go-lang
-export GOROOT=/mnt/projetos/shareapps/go-1.5
+export GOROOT=/mnt/projetos/shareapps/go-1.6
 PATH=$PATH:$GOROOT/bin
 export GOPATH=/mnt/projetos/shareapps/gopath
 PATH=$GOPATH/bin:$PATH

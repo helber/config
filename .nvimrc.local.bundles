@@ -38,6 +38,9 @@ NeoBundle 'garyburd/go-explorer'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'fatih/vim-go'
 
+" Buffer Kill
+NeoBundle 'qpkorr/vim-bufkill'
+
 " Surround
 NeoBundle 'tpope/vim-surround'
 " include vimrc project file

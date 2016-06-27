@@ -20,9 +20,9 @@ if has("autocmd")
     autocmd FileType html setlocal ts=4 sts=4 sw=4 et
 endif
 
-let g:NERDTreeWinSize=20
+let g:NERDTreeWinSize=30
 " let g:NERDTreeMapOpenInTabSilent='<RightMouse>'
-let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
+let g:syntastic_python_flake8_post_args='--max-line-length=100 --ignore=W391,F403'
 
 " let g:rehash256=1
 " colorscheme jellybeans

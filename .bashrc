@@ -92,8 +92,12 @@ p-platformio () {
     source .hproject
 }
 
-p-vod () {
-    cd /mnt/projetos/ativos/cianet/vod-hls
+p-haftec-gsm-control () {
+    cd /mnt/projetos/ativos/haftec/gsmcontrolservice
+}
+
+p-tdc () {
+    cd /mnt/projetos/ativos/cianet/documentacoes/apresentacoes/apresentacao-tdc2016
     source .hproject
 }
 
@@ -102,15 +106,20 @@ p-cordova () {
     source .hproject
 }
 
-p-middleware () {
+p-cianet-middleware () {
     cd /mnt/projetos/ativos/cianet/iptv-middleware/
     source .hproject
 }
 
-p-portabilidade () {
-    cd /mnt/projetos/ativos/django/portabilidade_django/
+p-cianet-remuxadmin () {
+    cd /mnt/projetos/ativos/cianet/remuxadmin/
     source .hproject
 }
+
+# p-portabilidade () {
+#     cd /mnt/projetos/ativos/django/portabilidade_django/
+#     source .hproject
+# }
 
 p-cianet-cluster () {
     cd /mnt/projetos/ativos/cianet/automacao/cianetcluster
@@ -143,6 +152,9 @@ PATH="/mnt/projetos/shareapps/vim/bin:$PATH"
 
 # Neovim compilado
 PATH="/mnt/projetos/shareapps/neovim/bin:$PATH"
+
+# Ctags fedora
+alias ctags-linux='/usr/bin/etags.ctags'
 
 # TMUX compilado
 # PATH="/mnt/projetos/shareapps/tmux/bin:$PATH"

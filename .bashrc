@@ -82,6 +82,10 @@ coreos_cianet () {
 export FLEETCTL_STRICT_HOST_KEY_CHECKING=false
 coreos_cianet
 
+p-dental () {
+    cd /mnt/projetos/ativos/dental/atual
+    source .hproject
+}
 p-autosan () {
     cd /mnt/projetos/ativos/django/autosan
     source .hproject

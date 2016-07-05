@@ -76,6 +76,12 @@ vnoremap p "_dP
 " nnoremap <c-n> :lnext<CR>
 " nnoremap <c-N> :lprevious<CR>
 
+" GitGutter
+
+noremap <Leader>gn :GitGutterNextHunk<CR>
+noremap <Leader>gp :GitGutterPrevHunk<CR>
+
+
 noremap <leader>c :BD<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 

@@ -21,7 +21,7 @@ endif
 
 let g:NERDTreeWinSize=20
 " let g:NERDTreeMapOpenInTabSilent='<RightMouse>'
-let g:syntastic_python_flake8_post_args='--ignore=W391,F403'
+let g:syntastic_python_flake8_post_args='--max-line-length=100 --ignore=W391,F403'
 
 " let g:rehash256=1
 " colorscheme jellybeans
@@ -30,7 +30,7 @@ colorscheme molokai
 " set mouse=n
 set mouse=a
 set ttyfast
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
 nmap <leader>l :set list!<CR>
 set listchars=space:.,tab:▸\ ,eol:¬
@@ -62,6 +62,10 @@ vnoremap p "_dP
 " let mapleader="\<Space>"
 " nnoremap <c-n> :lnext<CR>
 " nnoremap <c-N> :lprevious<CR>
+
+" GitGutter
+noremap <Leader>gn :GitGutterNextHunk<CR>
+noremap <Leader>gp :GitGutterPrevHunk<CR>
 
 noremap <leader>c :BD<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>

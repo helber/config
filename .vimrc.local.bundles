@@ -1,44 +1,44 @@
 
-NeoBundle "ekalinin/Dockerfile.vim"
+Plug 'ekalinin/Dockerfile.vim'
 
-" NeoBundle "vim-scripts/Vebugger"
+" Plug 'vim-scripts/Vebugger'
 " :call vebugger#pdb#start('manager.py', {'args':['runserver']})
 " :VBGstartPDB2 manage.py runserver
 " :VBGcontinue
 
-" NeoBundle "stephpy/vim-yaml"
+" Plug 'stephpy/vim-yaml'
 
 " Tmux
-NeoBundle 'sheerun/tmux.vim'
+Plug 'sheerun/tmux.vim'
 
 " Git NerdTree
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Colorscheme Themes -------------------->
-NeoBundle "nanotech/jellybeans.vim"
-" NeoBundle "altercation/vim-colors-solarized"
+Plug 'nanotech/jellybeans.vim'
+" Plug 'altercation/vim-colors-solarized'
 " Gruvbox theme
-" NeoBundle 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
 " Seoul256 theme
-" NeoBundle 'junegunn/seoul256.vim'
+" Plug 'junegunn/seoul256.vim'
 " Colorschema
-" NeoBundle 'flazz/vim-colorschemes'
+" Plug 'flazz/vim-colorschemes'
 
 
 " Systemd
-NeoBundle 'kurayama/systemd-vim-syntax'
+Plug 'kurayama/systemd-vim-syntax'
 
 " Vinegar
-" NeoBundle 'tpope/vim-vinegar'
+" Plug 'tpope/vim-vinegar'
 
 " go-explorer
-" NeoBundle 'garyburd/go-explorer'
-" NeoBundle 'Valloric/YouCompleteMe'
-" NeoBundle 'fatih/vim-go'
+" Plug 'garyburd/go-explorer'
+" Plug 'Valloric/YouCompleteMe'
+" Plug 'fatih/vim-go'
 
 " Surround
-NeoBundle 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Buffer Kill
-NeoBundle 'qpkorr/vim-bufkill'
+Plug 'qpkorr/vim-bufkill'
 

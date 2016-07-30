@@ -43,8 +43,3 @@ Plug 'qpkorr/vim-bufkill'
 
 " Surround
 Plug 'tpope/vim-surround'
-" include vimrc project file
-if filereadable('.vimrc.proj')
-    source .vimrc.proj
-endif
-

@@ -99,6 +99,11 @@ let g:go_fmt_command = "goimports"
 " let g:clang_complete_macros = 1
 " let g:acp_behaviorKeywordLength = 5
 
+" My Plug
+if filereadable(expand("~/.config/nvim/local_init_plug.vim"))
+  source ~/.config/nvim/local_init_plug.vim
+endif
+
 " include vimrc project file
 if filereadable(".vimrc.proj")
     source .vimrc.proj

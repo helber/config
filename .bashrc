@@ -8,6 +8,8 @@ fi
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
+. /etc/profile.d/vte.sh
+
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 # Python virtualenv
@@ -36,8 +38,8 @@ PATH=$PATH:/mnt/projetos/shareapps/android/adt-bundle-linux-x86_64-20140321/sdk/
 PATH=/mnt/projetos/shareapps/bin:$PATH
 
 # go-lang
-export GOROOT=/mnt/projetos/shareapps/go-1.6
-PATH=$PATH:$GOROOT/bin
+# export GOROOT=/mnt/projetos/shareapps/go-1.6
+# PATH=$PATH:$GOROOT/bin
 export GOPATH=/mnt/projetos/shareapps/gopath
 PATH=$GOPATH/bin:$PATH
 
@@ -100,8 +102,8 @@ p-haftec-gsm-control () {
     cd /mnt/projetos/ativos/haftec/gsmcontrolservice
 }
 
-p-tdc () {
-    cd /mnt/projetos/ativos/cianet/documentacoes/apresentacoes/apresentacao-tdc2016
+p-fisl () {
+    cd /mnt/projetos/ativos/fisl17/apresentacao
     source .hproject
 }
 
@@ -161,7 +163,7 @@ PATH="/mnt/projetos/shareapps/neovim/bin:$PATH"
 alias ctags-linux='/usr/bin/etags.ctags'
 
 # TMUX compilado
-# PATH="/mnt/projetos/shareapps/tmux/bin:$PATH"
+PATH="/mnt/projetos/shareapps/tmux/bin:$PATH"
 
 # Powerline shell
 #POWERLINE_BASH_CONTINUATION=1

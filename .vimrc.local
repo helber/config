@@ -1,11 +1,11 @@
 set shell=/bin/bash
 
-set expandtab shiftwidth=4 tabstop=8 colorcolumn=99 softtabstop=4 smartindent
+set expandtab shiftwidth=4 tabstop=8 colorcolumn=79 softtabstop=4 smartindent
 
 " vim-python
 augroup vimrc-python
   autocmd!
-  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=99
+  autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 colorcolumn=79
       \ formatoptions+=croq softtabstop=4 smartindent autoindent
       \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
@@ -22,7 +22,7 @@ endif
 
 let g:NERDTreeWinSize=30
 " let g:NERDTreeMapOpenInTabSilent='<RightMouse>'
-let g:syntastic_python_flake8_post_args='--max-line-length=100 --ignore=W391,F403'
+" let g:syntastic_python_flake8_post_args='--max-line-length=100 --ignore=W391,F403'
 
 " let g:rehash256=1
 " colorscheme jellybeans

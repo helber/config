@@ -104,6 +104,9 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
+set bomb
+set binary
+set ttyfast
 
 "" Fix backspace indent
 set backspace=indent,eol,start
@@ -125,11 +128,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-"" Encoding
-set bomb
-set binary
-set ttyfast
 
 "" Directories for swp files
 set nobackup
@@ -459,7 +457,8 @@ let g:syntastic_python_checkers=['python', 'flake8']
 let g:airline#extensions#virtualenv#enabled = 1
 
 
-
+autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 
 
 let g:javascript_enable_domhtmlcss = 1
@@ -470,6 +469,9 @@ augroup vimrc-javascript
   autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4 smartindent
 augroup END
 
+
+" for html files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 "" Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))

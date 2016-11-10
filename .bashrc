@@ -7,13 +7,14 @@ fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
-
-. /etc/profile.d/vte.sh
+if [[ $TERMINIX_ID ]]; then
+    source /etc/profile.d/vte.sh
+fi
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 # Python virtualenv
-WORKON_HOME=/mnt/projetos/ativos/django/virtualenvs/
+WORKON_HOME=/mnt/projetos/virtualenvs/
 export WORKON_HOME
 ## Virtualenv
 source /usr/bin/virtualenvwrapper.sh
@@ -33,15 +34,16 @@ PATH="$JRE_HOME/bin:$PATH"
 #SDK
 PATH=$PATH:/mnt/projetos/shareapps/android/android-sdk-linux/tools
 PATH=$PATH:/mnt/projetos/shareapps/android/adt-bundle-linux-x86_64-20140321/sdk/platform-tools
+#Studio
+PATH=$PATH:/mnt/projetos/shareapps/android-studio/bin
 
 # My shared apps across all linux distros
 PATH=/mnt/projetos/shareapps/bin:$PATH
 
 # go-lang
-# export GOROOT=/mnt/projetos/shareapps/go-1.6
-# PATH=$PATH:$GOROOT/bin
+export GOROOT=/mnt/projetos/shareapps/go
 export GOPATH=/mnt/projetos/shareapps/gopath
-PATH=$GOPATH/bin:$PATH
+PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # OPAM configuration
 # . /home/helber/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
@@ -72,26 +74,20 @@ p-autosan () {
     cd /mnt/projetos/ativos/django/autosan
     source .hproject
 }
-
 p-platformio () {
     cd /mnt/projetos/ativos/projetos/platformio
     source .hproject
 }
-
 p-haftec-gsm-control () {
     cd /mnt/projetos/ativos/haftec/gsmcontrolservice
 }
-
-p-fisl () {
-    cd /mnt/projetos/ativos/fisl17/apresentacao
-    source .hproject
-}
-
 p-cordova () {
     cd /mnt/projetos/ativos/projetos/cordova
     source .hproject
 }
-
+p-ahgora () {
+    cd /mnt/projetos/ativos/ahgora/pw2/
+}
 # p-portabilidade () {
 #     cd /mnt/projetos/ativos/django/portabilidade_django/
 #     source .hproject

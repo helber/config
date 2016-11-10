@@ -85,9 +85,13 @@ p-cordova () {
     cd /mnt/projetos/ativos/projetos/cordova
     source .hproject
 }
-p-ahgora () {
+p-ahgora-pw2 () {
     cd /mnt/projetos/ativos/ahgora/pw2/
 }
+p-ahgora-cloud () {
+    cd /mnt/projetos/ativos/ahgora/cloud/
+}
+
 # p-portabilidade () {
 #     cd /mnt/projetos/ativos/django/portabilidade_django/
 #     source .hproject
@@ -107,9 +111,6 @@ e-angular () {
     cd /mnt/projetos/ativos/projetos/javascript/angular/listaTelefonica
     source .hproject
 }
-
-# ESP8266
-# export PATH=/mnt/projetos/ativos/projetos/embedded/esp8266/esp-open-sdk/xtensa-lx106-elf/bin:$PATH
 
 # Define o vim como editor
 export EDITOR=vim

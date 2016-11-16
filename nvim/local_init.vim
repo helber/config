@@ -2,6 +2,8 @@ set shell=/bin/bash
 
 set expandtab shiftwidth=4 tabstop=8 colorcolumn=99 softtabstop=4 smartindent
 
+" set foldmethod=marker
+
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -60,8 +62,9 @@ vnoremap <leader>p "_dP
 vnoremap p "_dP
 
 " let mapleader="\<Space>"
-" nnoremap <c-n> :lnext<CR>
-" nnoremap <c-N> :lprevious<CR>
+nnoremap <C-n> :lne<CR>
+nnoremap <C-m> :lp<CR>
+nnoremap <Leader>a :cclose<CR>
 
 " GitGutter
 noremap <Leader>gn :GitGutterNextHunk<CR>
@@ -70,8 +73,12 @@ noremap <Leader>gp :GitGutterPrevHunk<CR>
 noremap <leader>c :BD<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
+
+
+
+" Golang {{{
 au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>m <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage)
 au FileType go nmap <Leader>ds <Plug>(go-def-split)
@@ -90,7 +97,34 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+let g:go_test_timeout = '10s'
+
 let g:go_fmt_command = "goimports"
+
+" let g:go_list_type = "quickfix"
+
+au FileType go setlocal expandtab shiftwidth=8 tabstop=8 colorcolumn=99
+    \ softtabstop=8 smartindent autoindent
+
+" deocomplete-go
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/bin/python3'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+
+" Run deoplete.nvim automatically
+let g:deoplete#enable_at_startup = 1
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#use_cache = 1
+
+" deoplete tab-complete
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" tern
+" autocmd FileType go nnoremap <silent> <buffer> gb :TernDef<CR>
+
+" }}}
 
 " clang_complete
 " let g:syntastic_python_python_exec = 'python3'

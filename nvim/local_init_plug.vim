@@ -34,9 +34,16 @@ Plug 'kurayama/systemd-vim-syntax'
 " Plug 'tpope/vim-vinegar'
 
 " go-explorer
-Plug 'garyburd/go-explorer'
-Plug 'Valloric/YouCompleteMe'
-Plug 'fatih/vim-go'
+" Plug 'garyburd/go-explorer'
+" Plug 'Valloric/YouCompleteMe'
+" Plug 'fatih/vim-go', { 'do': 'GoInstallBinaries' }
+
+
+" https://github.com/zchee/deoplete-go
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neovim/python-client'
+Plug 'nsf/gocode'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Buffer Kill
 Plug 'qpkorr/vim-bufkill'

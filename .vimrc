@@ -16,8 +16,6 @@ if !filereadable(vimplug_exists)
   silent !\curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   let g:not_finish_vimplug = "yes"
 
-  " Run shell script if exist on custom select language
-
   autocmd VimEnter * PlugInstall
 endif
 
@@ -70,21 +68,35 @@ Plug 'honza/vim-snippets'
 "" Color
 Plug 'tomasr/molokai'
 
+"*****************************************************************************
 "" Custom bundles
-"" Python Bundle
-Plug 'davidhalter/jedi-vim'
+"*****************************************************************************
 
+" c
 Plug 'vim-scripts/c.vim'
 
-"" Javascript Bundle
-Plug 'jelera/vim-javascript-syntax'
 
+" html
 "" HTML Bundle
 Plug 'amirh/HTML-AutoCloseTag'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'tpope/vim-haml'
 Plug 'mattn/emmet-vim'
+
+
+" javascript
+"" Javascript Bundle
+Plug 'jelera/vim-javascript-syntax'
+
+
+" python
+"" Python Bundle
+Plug 'davidhalter/jedi-vim'
+
+
+"*****************************************************************************
+"*****************************************************************************
 
 "" Include user's extra bundle
 if filereadable(expand("~/.vimrc.local.bundles"))
@@ -174,7 +186,7 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-
+  
   if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
@@ -182,12 +194,14 @@ else
       set term=xterm-256color
     endif
   endif
-
+  
 endif
+
 
 if &term =~ '256color'
   set t_ut=
 endif
+
 
 "" Disable the blinking cursor.
 set gcr=a:blinkon0
@@ -429,8 +443,31 @@ vnoremap K :m '<-2<CR>gv=gv
 "" Open current line on GitHub
 nnoremap <Leader>o :.Gbrowse<CR>
 
+"*****************************************************************************
 "" Custom configs
+"*****************************************************************************
 
+" c
+autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
+
+
+" html
+" for html files, 2 spaces
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+
+
+" javascript
+let g:javascript_enable_domhtmlcss = 1
+
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4 smartindent
+augroup END
+
+
+" python
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -457,21 +494,8 @@ let g:syntastic_python_checkers=['python', 'flake8']
 let g:airline#extensions#virtualenv#enabled = 1
 
 
-autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
-
-
-let g:javascript_enable_domhtmlcss = 1
-
-" vim-javascript
-augroup vimrc-javascript
-  autocmd!
-  autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4 smartindent
-augroup END
-
-
-" for html files, 2 spaces
-autocmd Filetype html setlocal ts=2 sw=2 expandtab
+"*****************************************************************************
+"*****************************************************************************
 
 "" Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
@@ -517,4 +541,5 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
+
 

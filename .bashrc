@@ -13,7 +13,7 @@ fi
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 # Python virtualenv
-WORKON_HOME=/mnt/projetos/ativos/django/virtualenvs/
+WORKON_HOME=/mnt/projetos/virtualenvs/
 export WORKON_HOME
 ## Virtualenv
 source /usr/bin/virtualenvwrapper.sh
@@ -38,8 +38,8 @@ PATH=$PATH:/mnt/projetos/shareapps/android/adt-bundle-linux-x86_64-20140321/sdk/
 PATH=/mnt/projetos/shareapps/bin:$PATH
 
 # go-lang
-# export GOROOT=/mnt/projetos/shareapps/go-1.6
-# PATH=$PATH:$GOROOT/bin
+export GOROOT=/mnt/projetos/shareapps/go-1.7
+PATH=$GOROOT/bin:$PATH
 export GOPATH=/mnt/projetos/shareapps/gopath
 PATH=$GOPATH/bin:$PATH
 
@@ -53,23 +53,31 @@ PATH=$GOPATH/bin:$PATH
 
 coreos_casa () {
     # Fleet (Docker)
-    export ETCD_HOST=10.0.0.9
+    export ETCD_HOST=10.0.0.10
     export FLEETCTL_ENDPOINT=http://${ETCD_HOST}:4001
     # export FLEETCTL_TUNNEL=${ETCD_HOST}:22
     export ETCDCTL_PEERS=http://${ETCD_HOST}:4001
     export FLEETCTL_EXPERIMENTAL_API=false
     export FLEET_ETCD_SERVERS=http://${ETCD_HOST}:4001
     # export FLEETCTL_TUNNEL=10.0.0.10:2200
+    export FLEETCTL_STRICT_HOST_KEY_CHECKING=false
 }
-export FLEETCTL_STRICT_HOST_KEY_CHECKING=false
-coreos_casa
+# coreos_casa
 
-p-dental () {
+p-dental-php () {
     cd /mnt/projetos/ativos/dental/atual
     source .hproject
 }
+p-dental-odoo () {
+    cd /mnt/projetos/ativos/dental/odoo
+    source .hproject
+}
 p-autosan () {
-    cd /mnt/projetos/ativos/django/autosan
+    cd /mnt/projetos/ativos/haftec/autosan
+    source .hproject
+}
+p-sumicity () {
+    cd /mnt/projetos/ativos/sumicity/sumicity
     source .hproject
 }
 
@@ -82,8 +90,18 @@ p-haftec-gsm-control () {
     cd /mnt/projetos/ativos/haftec/gsmcontrolservice
 }
 
-p-fisl () {
-    cd /mnt/projetos/ativos/fisl17/apresentacao
+p-redhat-horizon () {
+    cd /mnt/projetos/ativos/redhat/openstack/horizon/horizon
+    source ../.hproject
+}
+
+p-onsigntv () {
+    cd /mnt/projetos/ativos/e3c/
+    source .hproject
+}
+
+p-cianet-middleware () {
+    cd /mnt/projetos/ativos/cianet/iptv-middleware/
     source .hproject
 }
 
@@ -92,10 +110,10 @@ p-cordova () {
     source .hproject
 }
 
-# p-portabilidade () {
-#     cd /mnt/projetos/ativos/django/portabilidade_django/
-#     source .hproject
-# }
+p-portabilidade () {
+    cd /mnt/projetos/ativos/django/portabilidade_django/
+    source .hproject
+}
 
 e-golang () {
     cd /mnt/projetos/shareapps/gopath
@@ -146,10 +164,19 @@ export PS1='\[\e[01;30m\]`if [ $? = 0 ]; then echo "\[\e[32m\]✔ "; else echo "
 
 export PATH
 
-export NVM_DIR="/home/helber/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Nodejs
+if [ -d $HOME/.nvm ];then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi
+# Python
+if [ -d $HOME/.pyenv ];then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+fi
 
 
-NFPSE_PRODUCAO_VERSION=1.6.0.5;export NFPSE_PRODUCAO_VERSION; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C
+# NFPSE_PRODUCAO_VERSION=1.6.0.5;export NFPSE_PRODUCAO_VERSION; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C
 
-NFPSE_PRODUCAO_PATH="/home/helber/.pmf/NFPSePRODUCAO";export NFPSE_PRODUCAO_PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C
+# NFPSE_PRODUCAO_PATH="/home/helber/.pmf/NFPSePRODUCAO";export NFPSE_PRODUCAO_PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C

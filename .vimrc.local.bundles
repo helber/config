@@ -42,3 +42,9 @@ Plug 'tpope/vim-surround'
 " Buffer Kill
 Plug 'qpkorr/vim-bufkill'
 
+" Angular
+Plug 'burnettk/vim-angular'
+" Plug 'quramy/tsuquyomi'
+
+" TypeScript
+Plug 'leafgarland/typescript-vim'

@@ -19,7 +19,8 @@
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [user]
     name = Helber Maciel Guerra
-    email = helber@cianet.ind.br
+    email = helbermg@gmail.com
+    editor = vim
 [alias]
     s = status
     b = branch -v
@@ -32,3 +33,9 @@
     tagl = log --date-order --graph --tags --simplify-by-decoration --pretty=format:'%ai %h %d'
 [push]
     default = matching
+[gitreview]
+    username = helber
+[gerrit "default"]
+    host = review.openstack.org
+    port = 29418
+    user = helber

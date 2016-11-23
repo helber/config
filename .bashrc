@@ -167,6 +167,11 @@ export PS1='\[\e[01;30m\]`if [ $? = 0 ]; then echo "\[\e[32m\]✔ "; else echo "
 
 export PATH
 
+# Docker Version Manager
+if [ -d $HOME/.dvm ];then
+    source /home/helber/.dvm/dvm.sh
+fi
+
 # Nodejs
 if [ -d $HOME/.nvm ];then
     export NVM_DIR="$HOME/.nvm"

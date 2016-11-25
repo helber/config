@@ -48,3 +48,6 @@ Plug 'burnettk/vim-angular'
 
 " TypeScript
 Plug 'leafgarland/typescript-vim'
+
+" vim-json
+Plug 'elzr/vim-json'

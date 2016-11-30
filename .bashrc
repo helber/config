@@ -43,6 +43,7 @@ PATH=/mnt/projetos/shareapps/bin:$PATH
 # go-lang
 export GOROOT=/mnt/projetos/shareapps/go
 export GOPATH=/mnt/projetos/shareapps/gopath
+export OS_OUTPUT_GOPATH=1
 PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # OpenShift
@@ -122,6 +123,10 @@ p-ahgora-pw2 () {
 }
 p-ahgora-cloud () {
     cd /mnt/projetos/ativos/ahgora/cloud/
+}
+p-ahgora-go () {
+    cd /mnt/projetos/ativos/ahgora/go
+    source .hproject
 }
 
 p-portabilidade () {

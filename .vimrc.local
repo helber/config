@@ -93,6 +93,65 @@ noremap <leader>c :BD<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 
+" Golang {{{
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
+
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gw <Plug>(go-doc-browser)
+au FileType go nmap <Leader>gs <Plug>(go-implements)
+au FileType go nmap <Leader>gi <Plug>(go-info)
+au FileType go nmap <Leader>r <Plug>(go-rename)
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+let g:go_test_timeout = '10s'
+
+let g:go_fmt_command = "goimports"
+
+" let g:go_list_type = "quickfix"
+
+au FileType go setlocal expandtab shiftwidth=8 tabstop=8 colorcolumn=99
+    \ softtabstop=8 smartindent autoindent
+
+" deocomplete-go
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/bin/python3'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+
+" Run deoplete.nvim automatically
+let g:deoplete#enable_at_startup = 1
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#use_cache = 1
+
+" deoplete tab-complete
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" tern
+" autocmd FileType go nnoremap <silent> <buffer> gb :TernDef<CR>
+
+" }}}
+
+
 " include vimrc project file
 if filereadable(".vimrc.proj")
     source .vimrc.proj

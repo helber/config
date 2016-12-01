@@ -14,10 +14,13 @@ fi
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 # Python virtualenv
-WORKON_HOME=/mnt/projetos/virtualenvs/
-export WORKON_HOME
+# WORKON_HOME=/mnt/projetos/virtualenvs/
+# export WORKON_HOME
 ## Virtualenv
-source /usr/bin/virtualenvwrapper.sh
+# source /usr/bin/virtualenvwrapper.sh
+# My python
+PATH=/mnt/projetos/shareapps/python-3.5/bin:$PATH
+
 
 JAVA_HOME="/usr/java/latest/"
 # JAVA_HOME="/usr/lib/jvm/jre/"

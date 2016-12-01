@@ -46,7 +46,16 @@ PATH=/mnt/projetos/shareapps/bin:$PATH
 # go-lang
 export GOROOT=/mnt/projetos/shareapps/go
 export GOPATH=/mnt/projetos/shareapps/gopath
+export OS_OUTPUT_GOPATH=1
 PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# OpenShift
+export OC_PROJ=/mnt/projetos/shareapps/gopath/src/github.com/openshift/origin/
+export OC_BIN=$OC_PROJ/_output/local/bin/linux/amd64
+PATH=$OC_BIN:$PATH
+export OC_PATH=/var/lib/openshift
+export CURL_CA_BUNDLE=$OC_PATH/openshift.local.config/master/ca.crt
+
 
 # OPAM configuration
 # . /home/helber/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
@@ -118,14 +127,23 @@ p-ahgora-pw2 () {
 p-ahgora-cloud () {
     cd /mnt/projetos/ativos/ahgora/cloud/
 }
+p-ahgora-go () {
+    cd /mnt/projetos/ativos/ahgora/go
+    source .hproject
+}
 
 p-portabilidade () {
     cd /mnt/projetos/ativos/django/portabilidade_django/
     source .hproject
 }
 
-e-golang () {
-    cd /mnt/projetos/shareapps/gopath
+p-golang () {
+    cd $GOPATH
+    source .hproject
+}
+
+p-ahgora-openshift () {
+    cd $OC_PROJ
     source .hproject
 }
 
@@ -187,7 +205,3 @@ if [ -d $HOME/.pyenv ];then
     eval "$(pyenv init -)"
 fi
 
-
-# NFPSE_PRODUCAO_VERSION=1.6.0.5;export NFPSE_PRODUCAO_VERSION; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C
-
-# NFPSE_PRODUCAO_PATH="/home/helber/.pmf/NFPSePRODUCAO";export NFPSE_PRODUCAO_PATH; # ADDED BY INSTALLER - DO NOT EDIT OR DELETE THIS COMMENT - 3FBD6830-73C2-E692-007C-BA6A4920F160 4D34E9B9-ACF5-14B9-AC6F-3612BDF5EA4C

@@ -1,7 +1,6 @@
 angular2-snippets
 angular-2-typeScript-snippets
 angularjs
-atom-autocomplete-php
 atom-beautify
 atom-bootstrap3
 atom-html-preview
@@ -14,7 +13,6 @@ autocomplete-angular-material
 autocomplete-clang
 autocomplete-go
 autocomplete-ionic-framework
-autocomplete-python
 autocomplete-python
 build
 builder-go
@@ -38,8 +36,8 @@ gofmt
 go-get
 gometalinter-linter
 go-plus
-go-rename
 gorename
+go-rename
 ionic-framework-snippets
 ionic-preview
 language-ansible
@@ -50,7 +48,6 @@ language-ini
 language-markdown
 language-nginx
 language-systemd
-linter
 linter
 linter-flake8
 linter-gcc
@@ -71,9 +68,6 @@ newton-dark-ui
 nord-atom-syntax
 nord-atom-ui
 pigments
-platformio-ide
-platformio-ide-terminal
-platomformio
 project-manager
 python-tools
 react

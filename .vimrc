@@ -73,7 +73,7 @@ Plug 'tomasr/molokai'
 "*****************************************************************************
 
 " c
-Plug 'vim-scripts/c.vim'
+Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 
 
 " go

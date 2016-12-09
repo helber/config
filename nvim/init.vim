@@ -73,7 +73,7 @@ Plug 'tomasr/molokai'
 "*****************************************************************************
 
 " c
-Plug 'vim-scripts/c.vim'
+Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
 
 
 " go
@@ -104,8 +104,8 @@ Plug 'davidhalter/jedi-vim'
 "*****************************************************************************
 
 "" Include user's extra bundle
-if filereadable(expand("~/.config/nvimrc.local.bundles"))
-  source ~/.config/nvimrc.local.bundles
+if filereadable(expand("~/.config/nvim/local_bundles.vim"))
+  source ~/.config/nvim/local_bundles.vim
 endif
 
 call plug#end()
@@ -521,8 +521,8 @@ let g:airline#extensions#virtualenv#enabled = 1
 "*****************************************************************************
 
 "" Include user's local vim config
-if filereadable(expand("~/.config/nvimrc.local"))
-  source ~/.config/nvimrc.local
+if filereadable(expand("~/.config/nvim/local_init.vim"))
+  source ~/.config/nvim/local_init.vim
 endif
 
 "*****************************************************************************

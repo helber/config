@@ -54,7 +54,7 @@ export OC_PROJ=/mnt/projetos/shareapps/gopath/src/github.com/openshift/origin/
 export OC_BIN=$OC_PROJ/_output/local/bin/linux/amd64
 PATH=$OC_BIN:$PATH
 export OC_PATH=/var/lib/openshift
-export CURL_CA_BUNDLE=$OC_PATH/openshift.local.config/master/ca.crt
+# export CURL_CA_BUNDLE=$OC_PATH/openshift.local.config/master/ca.crt
 
 
 # OPAM configuration
@@ -126,6 +126,7 @@ p-ahgora-pw2 () {
 }
 p-ahgora-cloud () {
     cd /mnt/projetos/ativos/ahgora/cloud/
+    source .hproject
 }
 p-ahgora-go () {
     cd /mnt/projetos/ativos/ahgora/go

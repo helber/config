@@ -40,10 +40,10 @@ Plug 'kurayama/systemd-vim-syntax'
 
 
 " https://github.com/zchee/deoplete-go
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neovim/python-client'
-Plug 'nsf/gocode'
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
 
 " Buffer Kill
 Plug 'qpkorr/vim-bufkill'

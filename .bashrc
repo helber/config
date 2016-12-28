@@ -19,7 +19,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 ## Virtualenv
 # source /usr/bin/virtualenvwrapper.sh
 # My python
-PATH=/mnt/projetos/shareapps/python-3.5/bin:$PATH
+PATH=/mnt/projetos/shareapps/python-3.6/bin:$PATH
 
 
 JAVA_HOME="/usr/java/latest/"

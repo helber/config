@@ -121,6 +121,8 @@ p-cordova () {
     cd /mnt/projetos/ativos/projetos/cordova
     source .hproject
 }
+
+## Ahgora {{{
 p-ahgora-pw2 () {
     cd /mnt/projetos/ativos/ahgora/pw2/
 }
@@ -132,6 +134,15 @@ p-ahgora-go () {
     cd /mnt/projetos/ativos/ahgora/go
     source .hproject
 }
+p-ahgora-openshift-src () {
+    cd $OC_PROJ
+    source .hproject
+}
+p-ahgora-openshift-proj () {
+    cd /mnt/projetos/ativos/ahgora/cloud/openshift/
+    source .hproject
+}
+## }}}
 
 p-portabilidade () {
     cd /mnt/projetos/ativos/django/portabilidade_django/
@@ -143,10 +154,6 @@ p-golang () {
     source .hproject
 }
 
-p-ahgora-openshift () {
-    cd $OC_PROJ
-    source .hproject
-}
 
 e-pydata () {
     cd /mnt/projetos/ativos/projetos/python/python4dataanalysis

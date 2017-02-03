@@ -161,7 +161,7 @@ e-pydata () {
 }
 
 e-angular () {
-    cd /mnt/projetos/ativos/projetos/javascript/angular/listaTelefonica
+    cd /mnt/projetos/ativos/projetos/javascript/angular
     source .hproject
 }
 

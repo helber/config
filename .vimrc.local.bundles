@@ -52,3 +52,6 @@ Plug 'leafgarland/typescript-vim'
 
 " vim-json
 Plug 'elzr/vim-json'
+
+" dos ini files
+Plug 'xuhdev/syntax-dosini.vim'

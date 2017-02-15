@@ -44,6 +44,7 @@ Plug 'kurayama/systemd-vim-syntax'
 Plug 'neovim/python-client'
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 " Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'jodosha/vim-godebug'
 
 " Buffer Kill
 Plug 'qpkorr/vim-bufkill'

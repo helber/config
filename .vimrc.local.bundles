@@ -55,3 +55,10 @@ Plug 'elzr/vim-json'
 
 " dos ini files
 Plug 'xuhdev/syntax-dosini.vim'
+
+" Python yaml itentation
+Plug 'tweekmonster/braceless.vim'
+
+" Django
+Plug 'tweekmonster/django-plus.vim'
+

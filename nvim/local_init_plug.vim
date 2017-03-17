@@ -51,3 +51,10 @@ Plug 'qpkorr/vim-bufkill'
 
 " Surround
 Plug 'tpope/vim-surround'
+
+" Python yaml itentation
+Plug 'tweekmonster/braceless.vim'
+
+" Django
+Plug 'tweekmonster/django-plus.vim'
+

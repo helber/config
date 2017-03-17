@@ -20,7 +20,7 @@
 [user]
     name = Helber Maciel Guerra
     editor = vim
-    email = helber.guerra@ahgora.com.br
+	email = helbermg@gmail.com
 [alias]
     s = status
     b = branch -v

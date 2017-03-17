@@ -214,3 +214,7 @@ fi
 #     eval "$(pyenv init -)"
 # fi
 
+# My user secret env vars
+if [ -f ~/.bashrc_secrets ];then
+    source ~/.bashrc_secrets
+fi

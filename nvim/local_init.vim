@@ -83,7 +83,7 @@ nnoremap <Leader>a :cclose<CR>
 noremap <Leader>gn :GitGutterNextHunk<CR>
 noremap <Leader>gp :GitGutterPrevHunk<CR>
 
-noremap <leader>c :BD<CR>
+noremap <leader>c :bd<CR>
 nnoremap <F5> :buffers<CR>:buffer<Space>
 
 

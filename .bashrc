@@ -139,6 +139,9 @@ p-ahgora-openshift-src () {
     cd $OC_PROJ
     source .hproject
 }
+p-ahgora-sistemas () {
+    cd /mnt/projetos/ativos/ahgora/sistemas/
+}
 p-ahgora-openshift-proj () {
     cd /mnt/projetos/ativos/ahgora/cloud/openshift/
     source .hproject

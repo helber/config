@@ -65,9 +65,9 @@ vnoremap <leader>d "_d
 
 " My custom ctrlp
 let g:ctRLP_Custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|tox|ico|git|hg|svn))$'
-if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore '+ g:ctrlp_custom_ignore +' -g ""'
-endif
+" if executable('ag')
+"     let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore '+ g:ctrlp_custom_ignore +' -g ""'
+" endif
 
 " replace currently selected text with default register
 " without yanking it

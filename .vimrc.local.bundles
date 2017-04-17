@@ -62,3 +62,5 @@ Plug 'tweekmonster/braceless.vim'
 " Django
 Plug 'tweekmonster/django-plus.vim'
 
+" Terraform
+Plug 'hashivim/vim-terraform'

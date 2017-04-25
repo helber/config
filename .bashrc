@@ -7,9 +7,9 @@ fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
-if [[ $TERMINIX_ID ]]; then
-    source /etc/profile.d/vte.sh
-fi
+#if [[ $TERMINIX_ID ]]; then
+#    source /etc/profile.d/vte.sh
+#fi
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
@@ -20,7 +20,7 @@ PATH=$PATH:$HOME/.local/bin:$HOME/bin
 # source /usr/bin/virtualenvwrapper.sh
 
 # My python
-PATH=/mnt/projetos/shareapps/python-3.6/bin:$PATH
+# PATH=/mnt/projetos/shareapps/python-3.6/bin:$PATH
 
 
 JAVA_HOME="/usr/java/latest/"
@@ -108,10 +108,10 @@ p-redhat-horizon () {
     source ../.hproject
 }
 
-p-onsigntv () {
-    cd /mnt/projetos/ativos/e3c/
-    source .hproject
-}
+# p-onsigntv () {
+#     cd /mnt/projetos/ativos/e3c/
+#     source .hproject
+# }
 
 p-cianet-middleware () {
     cd /mnt/projetos/ativos/cianet/iptv-middleware/

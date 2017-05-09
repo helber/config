@@ -35,7 +35,7 @@ Plug 'kurayama/systemd-vim-syntax'
 " Plug 'garyburd/go-explorer'
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'fatih/vim-go'
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+" Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " Surround
 Plug 'tpope/vim-surround'
@@ -60,7 +60,7 @@ Plug 'xuhdev/syntax-dosini.vim'
 Plug 'tweekmonster/braceless.vim'
 
 " Django
-Plug 'tweekmonster/django-plus.vim'
+" Plug 'tweekmonster/django-plus.vim'
 
 " Terraform
 Plug 'hashivim/vim-terraform'

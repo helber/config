@@ -56,5 +56,5 @@ Plug 'tpope/vim-surround'
 Plug 'tweekmonster/braceless.vim'
 
 " Django
-Plug 'tweekmonster/django-plus.vim'
+" Plug 'tweekmonster/django-plus.vim'
 

@@ -83,10 +83,6 @@ p-dental-php () {
     cd /mnt/projetos/ativos/dental/atual
     source .hproject
 }
-p-dental-odoo () {
-    cd /mnt/projetos/ativos/dental/odoo
-    source .hproject
-}
 p-autosan () {
     cd /mnt/projetos/ativos/haftec/autosan
     source .hproject
@@ -126,6 +122,9 @@ p-cordova () {
 ## Ahgora {{{
 p-ahgora-pw2 () {
     cd /mnt/projetos/ativos/ahgora/pw2/
+}
+p-ahgora-clientes () {
+    cd /mnt/projetos/ativos/ahgora/clientes/
 }
 p-ahgora-cloud () {
     cd /mnt/projetos/ativos/ahgora/cloud/
@@ -216,6 +215,11 @@ fi
 #     export PATH="$PYENV_ROOT/bin:$PATH"
 #     eval "$(pyenv init -)"
 # fi
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+    source /etc/profile.d/vte.sh
+fi
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # My user secret env vars
 if [ -f ~/.bashrc_secrets ];then

@@ -79,10 +79,6 @@ coreos_casa () {
 }
 # coreos_casa
 
-p-dental-php () {
-    cd /mnt/projetos/ativos/dental/atual
-    source .hproject
-}
 p-autosan () {
     cd /mnt/projetos/ativos/haftec/autosan
     source .hproject
@@ -104,10 +100,10 @@ p-redhat-horizon () {
     source ../.hproject
 }
 
-# p-onsigntv () {
-#     cd /mnt/projetos/ativos/e3c/
-#     source .hproject
-# }
+p-mapa () {
+    cd /mnt/projetos/ativos/mapa/GitGoServer
+    source .hproject
+}
 
 p-cianet-middleware () {
     cd /mnt/projetos/ativos/cianet/iptv-middleware/

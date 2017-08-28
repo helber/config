@@ -64,3 +64,6 @@ Plug 'tweekmonster/braceless.vim'
 
 " Terraform
 Plug 'hashivim/vim-terraform'
+
+" Vim-move
+Plug 'matze/vim-move'

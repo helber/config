@@ -151,6 +151,8 @@ let g:deoplete#sources#go#use_cache = 1
 
 " }}}
 
+" vim-move set to <C-k> and <C-j>
+let g:move_key_modifier = 'C'
 
 " include vimrc project file
 if filereadable(".vimrc.proj")

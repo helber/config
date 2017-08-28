@@ -58,3 +58,7 @@ Plug 'tweekmonster/braceless.vim'
 " Django
 " Plug 'tweekmonster/django-plus.vim'
 
+
+" Vim-move
+Plug 'matze/vim-move'
+

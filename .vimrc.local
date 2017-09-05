@@ -33,7 +33,9 @@ let g:NERDTreeWinSize=30
 
 " let g:rehash256=1
 " colorscheme jellybeans
-colorscheme molokai
+" colorscheme molokai
+colorscheme burnttoast256
+set background=dark
 " colorscheme rdark-terminal
 let g:airline_theme = 'dark'
 if has("mouse_sgr")
@@ -152,7 +154,23 @@ let g:deoplete#sources#go#use_cache = 1
 " }}}
 
 " vim-move set to <C-k> and <C-j>
-let g:move_key_modifier = 'C'
+" let g:move_key_modifier = 'C'
+" let g:move_map_keys = 0
+" let g:move_key_modifier = 'M'
+set <F20>=j
+set <F21>=k
+vmap <F20> <Plug>MoveBlockDown
+vmap <F21> <Plug>MoveBlockUp
+nmap <F20> <Plug>MoveLineDown
+nmap <F21> <Plug>MoveLineUp
+
+
+set relativenumber
+set nowrap
+" But do wrap on these types of files...
+autocmd FileType markdown setlocal wrap
+autocmd FileType html setlocal wrap
+
 
 " include vimrc project file
 if filereadable(".vimrc.proj")

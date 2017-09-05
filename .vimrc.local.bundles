@@ -16,6 +16,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Colorscheme Themes -------------------->
 Plug 'nanotech/jellybeans.vim'
+Plug 'chr4/jellygrass.vim'
+Plug 'vim-scripts/burnttoast256'
 " Plug 'altercation/vim-colors-solarized'
 " Gruvbox theme
 " Plug 'morhetz/gruvbox'
@@ -67,3 +69,5 @@ Plug 'hashivim/vim-terraform'
 
 " Vim-move
 Plug 'matze/vim-move'
+
+Plug 'tpope/vim-markdown'

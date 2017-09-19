@@ -157,12 +157,12 @@ let g:deoplete#sources#go#use_cache = 1
 " let g:move_key_modifier = 'C'
 " let g:move_map_keys = 0
 " let g:move_key_modifier = 'M'
-set <F20>=j
-set <F21>=k
-vmap <F20> <Plug>MoveBlockDown
-vmap <F21> <Plug>MoveBlockUp
-nmap <F20> <Plug>MoveLineDown
-nmap <F21> <Plug>MoveLineUp
+" set <F20>=j
+" set <F21>=k
+" vmap <F20> <Plug>MoveBlockDown
+" vmap <F21> <Plug>MoveBlockUp
+" nmap <F20> <Plug>MoveLineDown
+" nmap <F21> <Plug>MoveLineUp
 
 
 set relativenumber
@@ -171,6 +171,21 @@ set nowrap
 autocmd FileType markdown setlocal wrap
 autocmd FileType html setlocal wrap
 
+
+" noremap hh <esc>
+" nnoremap ; :
+" nnoremap : ;
+
+noremap <up> :echoerr 'use k to up'<CR>
+noremap <down> :echoerr 'use j to down'<CR>
+noremap <left> :echoerr 'use h to left'<CR>
+noremap <right> :echoerr 'use l to right'<CR>
+
+" inoremap <up> <ESC>:echoerr 'use k to up'<CR>
+" inoremap <down> <ESC>:echoerr 'use j to down'<CR>
+" inoremap <left> <ESC>:echoerr 'use h to left'<CR>
+" inoremap <right> <ESC>:echoerr 'use l to right'<CR>
+" inoremap <ESC> <Nop>
 
 " include vimrc project file
 if filereadable(".vimrc.proj")

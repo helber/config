@@ -1,4 +1,4 @@
-" vim-bootstrap 32075a8
+" vim-bootstrap 13d3848
 
 "*****************************************************************************
 "" Vim-PLug core
@@ -479,6 +479,7 @@ function! s:build_go_files()
   endif
 endfunction
 
+let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
 let g:syntastic_go_checkers = ['golint', 'govet']
@@ -524,7 +525,9 @@ augroup go
   au FileType go nmap <Leader>i <Plug>(go-info)
   au FileType go nmap <silent> <Leader>l <Plug>(go-metalinter)
   au FileType go nmap <C-g> :GoDecls<cr>
+  au FileType go nmap <C-f> :GoDeclsDir<cr>
   au FileType go imap <C-g> <esc>:<C-u>GoDecls<cr>
+  au FileType go imap <C-f> <esc>:<C-u>GoDeclsDir<cr>
   au FileType go nmap <leader>rb :<C-u>call <SID>build_go_files()<CR>
 
 augroup END

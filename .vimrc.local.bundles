@@ -1,13 +1,6 @@
 
 Plug 'ekalinin/Dockerfile.vim'
 
-" Plug 'vim-scripts/Vebugger'
-" :call vebugger#pdb#start('manager.py', {'args':['runserver']})
-" :VBGstartPDB2 manage.py runserver
-" :VBGcontinue
-
-" Plug 'stephpy/vim-yaml'
-
 " Tmux
 Plug 'sheerun/tmux.vim'
 
@@ -45,13 +38,6 @@ Plug 'tpope/vim-surround'
 " Buffer Kill
 Plug 'qpkorr/vim-bufkill'
 
-" Angular
-Plug 'burnettk/vim-angular'
-" Plug 'quramy/tsuquyomi'
-
-" TypeScript
-Plug 'leafgarland/typescript-vim'
-
 " vim-json
 Plug 'elzr/vim-json'
 
@@ -66,6 +52,9 @@ Plug 'tweekmonster/braceless.vim'
 
 " Terraform
 Plug 'hashivim/vim-terraform'
+
+" Ansible
+Plug 'pearofducks/ansible-vim'
 
 " Vim-move
 Plug 'matze/vim-move'

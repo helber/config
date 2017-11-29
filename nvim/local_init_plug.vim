@@ -11,8 +11,6 @@ Plug 'ekalinin/Dockerfile.vim'
 " Tmux
 Plug 'sheerun/tmux.vim'
 
-Plug 'othree/html5.vim'
-
 " Git NerdTree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 

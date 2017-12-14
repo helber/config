@@ -122,9 +122,8 @@ let g:go_test_timeout = '10s'
 
 let g:go_fmt_command = "goimports"
 
-" au FileType go setlocal expandtab shiftwidth=8 tabstop=8 colorcolumn=99
-"    \ softtabstop=8 smartindent autoindent
-au FileType go setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=99 softtabstop=8 smartindent autoindent
+au FileType go setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=99 \
+    softtabstop=4 smartindent autoindent
 
 " deocomplete-go
 " Path to python interpreter for neovim

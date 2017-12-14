@@ -130,8 +130,8 @@ let g:go_fmt_command = "goimports"
 
 " let g:go_list_type = "quickfix"
 
-au FileType go setlocal expandtab shiftwidth=8 tabstop=8 colorcolumn=99
-    \ softtabstop=8 smartindent autoindent
+au FileType go setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=99
+    \ softtabstop=4 smartindent autoindent
 
 " deocomplete-go
 " Path to python interpreter for neovim

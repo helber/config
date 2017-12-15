@@ -2,6 +2,13 @@ set shell=/bin/bash
 
 set expandtab shiftwidth=4 tabstop=8 colorcolumn=79 softtabstop=4 smartindent
 
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
+
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -128,7 +135,21 @@ let g:go_test_timeout = '10s'
 
 let g:go_fmt_command = "goimports"
 
-" let g:go_list_type = "quickfix"
+let g:go_list_type = "quickfix"
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" run :GoBuild or :GoTestCompile based on the go file
+" function! s:build_go_files()
+"   let l:file = expand('%')
+"   if l:file =~# '^\f\+_test\.go$'
+"     call go#test#Test(0, 1)
+"   elseif l:file =~# '^\f\+\.go$'
+"     call go#cmd#Build(0)
+"   endif
+" endfunction
+" autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
 
 au FileType go setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=99
     \ softtabstop=4 smartindent autoindent

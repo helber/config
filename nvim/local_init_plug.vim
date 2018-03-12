@@ -60,3 +60,5 @@ Plug 'tweekmonster/braceless.vim'
 " Vim-move
 Plug 'matze/vim-move'
 
+" Completion
+Plug 'roxma/nvim-completion-maneger'

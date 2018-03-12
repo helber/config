@@ -41,9 +41,10 @@ let g:NERDTreeWinSize=30
 " let g:rehash256=1
 " colorscheme jellybeans
 " colorscheme molokai
-colorscheme burnttoast256
 set background=dark
-" colorscheme rdark-terminal
+" colorscheme burnttoast256
+" colorscheme burnttoast256
+colorscheme dracula
 let g:airline_theme = 'dark'
 if has("mouse_sgr")
     set ttymouse=sgr
@@ -207,6 +208,10 @@ noremap <right> :echoerr 'use l to right'<CR>
 " inoremap <left> <ESC>:echoerr 'use h to left'<CR>
 " inoremap <right> <ESC>:echoerr 'use l to right'<CR>
 " inoremap <ESC> <Nop>
+" expand('~/.vim/plugged')
+if filereadable(expand("~/.vimrc.common"))
+    source ~/.vimrc.common
+endif
 
 " include vimrc project file
 if filereadable(".vimrc.proj")

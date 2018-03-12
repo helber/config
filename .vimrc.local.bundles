@@ -11,6 +11,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'nanotech/jellybeans.vim'
 Plug 'chr4/jellygrass.vim'
 Plug 'vim-scripts/burnttoast256'
+Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'altercation/vim-colors-solarized'
 " Gruvbox theme
 " Plug 'morhetz/gruvbox'
@@ -60,3 +61,7 @@ Plug 'pearofducks/ansible-vim'
 Plug 'matze/vim-move'
 
 Plug 'tpope/vim-markdown'
+
+
+
+" Plug 'roxma/nvim-completion-maneger'

@@ -1,0 +1,3 @@
+nnoremap <leader>ç : source ~/.vimrc<cr>
+set norelativenumber
+

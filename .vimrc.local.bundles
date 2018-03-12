@@ -62,6 +62,6 @@ Plug 'matze/vim-move'
 
 Plug 'tpope/vim-markdown'
 
-
-
-" Plug 'roxma/nvim-completion-maneger'
+Plug 'Shougo/vimshell.vim'
+Plug 'Shougo/vimproc.vim'
+Plug 'sebdah/vim-delve'

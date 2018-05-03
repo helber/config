@@ -39,12 +39,12 @@ let g:NERDTreeWinSize=30
 " let g:syntastic_python_flake8_post_args='--max-line-length=100 --ignore=W391,F403'
 
 " let g:rehash256=1
-" colorscheme jellybeans
+colorscheme jellybeans
 " colorscheme molokai
 set background=dark
 " colorscheme burnttoast256
 " colorscheme burnttoast256
-colorscheme dracula
+"" colorscheme dracula
 let g:airline_theme = 'dark'
 if has("mouse_sgr")
     set ttymouse=sgr

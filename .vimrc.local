@@ -1,7 +1,5 @@
 set shell=/bin/bash
 
-set expandtab shiftwidth=4 tabstop=8 colorcolumn=79 softtabstop=4 smartindent
-
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
@@ -22,6 +20,7 @@ autocmd Filetype htmldjango setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
 autocmd FileType htmldjango set commentstring={#\ %s\ #}
+
 set cursorline
 
 " let g:jedi#force_py_version = 2
@@ -29,6 +28,8 @@ if has("autocmd")
     filetype on
     " yaml
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
+    " yaml
+    autocmd FileType md setlocal ts=2 sts=2 sw=2 et
     " autocmd FileType make setlocal ts=8 sts=8 sw=8 et
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
     autocmd FileType html setlocal ts=4 sts=4 sw=4 et
@@ -39,12 +40,12 @@ let g:NERDTreeWinSize=30
 " let g:syntastic_python_flake8_post_args='--max-line-length=100 --ignore=W391,F403'
 
 " let g:rehash256=1
-colorscheme jellybeans
 " colorscheme molokai
 set background=dark
 " colorscheme burnttoast256
 " colorscheme burnttoast256
-"" colorscheme dracula
+colorscheme jellybeans
+" colorscheme dracula
 let g:airline_theme = 'dark'
 if has("mouse_sgr")
     set ttymouse=sgr
@@ -58,11 +59,11 @@ set clipboard=unnamedplus
 
 nmap <leader>l :set list!<CR>
 " set listchars=space:\.,tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
-if v:version >= 74
-    set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
-else
-    set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
-endif
+" if v:version >= 74
+"     set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
+" else
+"     set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
+" endif
 
 " Invisible character colors
 "highlight NonText guifg=#4a4a59
@@ -77,12 +78,6 @@ nnoremap <leader>sc :CloseSession<CR>
 " delete without yanking
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
-
-" My custom ctrlp
-" let g:ctRLP_Custom_ignore = '\v[\/](node_modules|target|dist|vendor)|(\.(swp|tox|ico|git|hg|svn))$'
-" if executable('ag')
-"     let g:ctrlp_user_command = 'ag %s -l --nocolor --ignore '+ g:ctrlp_custom_ignore +' -g ""'
-" endif
 
 " replace currently selected text with default register
 " without yanking it
@@ -100,7 +95,8 @@ noremap <Leader>gp :GitGutterPrevHunk<CR>
 
 
 noremap <leader>c :BD<CR>
-nnoremap <F5> :buffers<CR>:buffer<Space>
+" nnoremap <F5> :buffers<CR>:buffer<Space>
+" au FileType go nmap <leader>gd <Plug>(go-debug)
 
 
 " Golang {{{
@@ -110,36 +106,36 @@ let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_autosave = 1
 
-au FileType go nmap <leader>gr <Plug>(go-run)
-au FileType go nmap <leader>gb <Plug>(go-build)
-au FileType go nmap <leader>gt <Plug>(go-test)
-au FileType go nmap <leader>gc <Plug>(go-coverage)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <Leader>gw <Plug>(go-doc-browser)
-" au FileType go nmap <Leader>gs <Plug>(go-implements)
-au FileType go nmap <Leader>gi <Plug>(go-info)
-au FileType go nmap <Leader>r <Plug>(go-rename)
+" au FileType go nmap <leader>gr <Plug>(go-run)
+" au FileType go nmap <leader>gb <Plug>(go-build)
+" au FileType go nmap <leader>gt <Plug>(go-test)
+" au FileType go nmap <leader>gc <Plug>(go-coverage)
+" au FileType go nmap <Leader>ds <Plug>(go-def-split)
+" au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+" au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+" au FileType go nmap <Leader>gd <Plug>(go-doc)
+" au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+" au FileType go nmap <Leader>gw <Plug>(go-doc-browser)
+" " au FileType go nmap <Leader>gs <Plug>(go-implements)
+" au FileType go nmap <Leader>gi <Plug>(go-info)
+" au FileType go nmap <Leader>r <Plug>(go-rename)
 
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_fields = 1
+" let g:go_highlight_types = 1
+" let g:go_highlight_structs = 1
+" let g:go_highlight_operators = 1
+" let g:go_highlight_build_constraints = 1
 
-let g:go_test_timeout = '10s'
+" let g:go_test_timeout = '10s'
 
-let g:go_fmt_command = "goimports"
+" let g:go_fmt_command = "goimports"
 
-let g:go_list_type = "quickfix"
-map <C-n> :cnext<CR>
-map <C-m> :cprevious<CR>
-nnoremap <leader>a :cclose<CR>
+" let g:go_list_type = "quickfix"
+" map <C-n> :cnext<CR>
+" map <C-m> :cprevious<CR>
+" nnoremap <leader>a :cclose<CR>
 
 " run :GoBuild or :GoTestCompile based on the go file
 " function! s:build_go_files()
@@ -152,8 +148,8 @@ nnoremap <leader>a :cclose<CR>
 " endfunction
 " autocmd FileType go nmap <leader>gb :<C-u>call <SID>build_go_files()<CR>
 
-au FileType go setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=99
-    \ softtabstop=4 smartindent autoindent
+" au FileType go setlocal expandtab shiftwidth=4 tabstop=4 colorcolumn=99
+"     \ softtabstop=4 smartindent autoindent
 
 " deocomplete-go
 " Path to python interpreter for neovim
@@ -161,12 +157,12 @@ let g:python3_host_prog  = '/usr/bin/python3'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
 
-" Run deoplete.nvim automatically
-let g:deoplete#enable_at_startup = 1
-" deoplete-go settings
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#sources#go#use_cache = 1
+" " Run deoplete.nvim automatically
+" let g:deoplete#enable_at_startup = 1
+" " deoplete-go settings
+" let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+" let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+" let g:deoplete#sources#go#use_cache = 1
 
 " deoplete tab-complete
 " inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
@@ -190,7 +186,7 @@ let g:deoplete#sources#go#use_cache = 1
 set relativenumber
 set nowrap
 " But do wrap on these types of files...
-autocmd FileType markdown setlocal wrap
+autocmd FileType markdown setlocal wrap ts=2 sts=2 sw=2 et
 autocmd FileType html setlocal wrap
 
 

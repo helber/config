@@ -17,10 +17,12 @@
     whitespace = red reverse
 [core]
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    quotepath = false
+	fileMode = true
 [user]
     name = Helber Maciel Guerra
     editor = vim
-    email = helber.guerra@ahgora.com.br
+	email = helber.guerra@gmail.com
 [alias]
     s = status
     b = branch -v
@@ -32,6 +34,7 @@
     sumario = log --pretty=format:'* %Cred%h%Creset [%ad] %C(yellow)%s%Creset'
     tagl = log --date-order --graph --tags --simplify-by-decoration --pretty=format:'%ai %h %d'
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+    change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
 [push]
     default = matching
 [gitreview]

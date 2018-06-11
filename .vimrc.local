@@ -1,5 +1,9 @@
 set shell=/bin/bash
 
+" Fold method
+set foldmethod=indent
+set foldlevelstart=1
+
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz

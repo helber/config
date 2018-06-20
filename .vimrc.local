@@ -2,7 +2,7 @@ set shell=/bin/bash
 
 " Fold method
 set foldmethod=indent
-set foldlevelstart=1
+set foldlevelstart=10
 
 nnoremap n nzz
 nnoremap N Nzz

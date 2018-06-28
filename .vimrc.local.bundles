@@ -55,7 +55,7 @@ Plug 'tweekmonster/braceless.vim'
 Plug 'hashivim/vim-terraform'
 
 " Ansible
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
+" Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
 " Plug 'chase/vim-ansible-yaml'
 
 " Vim-move
@@ -65,3 +65,15 @@ Plug 'tpope/vim-markdown'
 
 Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim'
+
+" Black
+Plug 'ambv/black'
+
+" Ansible
+Plug 'MicahElliott/Rocannon'
+
+
+" Vim completor
+" Plug 'maralla/completor.vim'
+
+" Plug 'prabirshrestha/asyncomplete.vim'

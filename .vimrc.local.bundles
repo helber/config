@@ -46,7 +46,7 @@ Plug 'elzr/vim-json'
 Plug 'xuhdev/syntax-dosini.vim'
 
 " Python yaml itentation
-Plug 'tweekmonster/braceless.vim'
+" Plug 'tweekmonster/braceless.vim'
 
 " Django
 " Plug 'tweekmonster/django-plus.vim'
@@ -71,6 +71,7 @@ Plug 'ambv/black'
 
 " Ansible
 Plug 'MicahElliott/Rocannon'
+" Plug 'hejack0207/ansible.vim'
 
 
 " Vim completor

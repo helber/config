@@ -1,8 +1,8 @@
 set shell=/bin/bash
 
 " Fold method
-set foldmethod=indent
-set foldlevelstart=10
+" set foldmethod=indent
+" set foldlevelstart=10
 
 nnoremap n nzz
 nnoremap N Nzz
@@ -38,6 +38,8 @@ if has("autocmd")
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
     autocmd FileType html setlocal ts=4 sts=4 sw=4 et
 endif
+
+let g:polyglot_disabled = ['python', 'ansible']
 
 let g:NERDTreeWinSize=30
 " let g:NERDTreeMapOpenInTabSilent='<RightMouse>'

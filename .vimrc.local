@@ -4,6 +4,9 @@ set shell=/bin/bash
 " set foldmethod=indent
 " set foldlevelstart=10
 
+" Black
+let g:black_linelength = 79
+
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
@@ -64,13 +67,11 @@ set ttyfast
 set clipboard=unnamedplus
 
 nmap <leader>l :set list!<CR>
-" set listchars=space:\.,tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
-" if v:version >= 74
-"     set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
-" else
-"     set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
-" endif
-
+if v:version >= 74
+    set listchars=space:\.,tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
+else
+    set listchars=tab:▸\ ,eol:↵,trail:·,extends:↷,precedes:↶
+endif
 " Invisible character colors
 "highlight NonText guifg=#4a4a59
 "highlight SpecialKey guifg=#4a4a59

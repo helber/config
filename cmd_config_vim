@@ -1,0 +1,19 @@
+#!/bin/bash
+./configure \
+--with-features=huge \
+--enable-largefile=yes \
+--enable-cscope=yes \
+--enable-pythoninterp=dynamic \
+--enable-multibyte \
+--enable-gui=gnome3 \
+--with-x=yes \
+--with-tlib=ncurses \
+--enable-python3interp=dynamic \
+--enable-terminal \
+--enable-gtk3-check \
+--prefix=/mnt/projetos/shareapps/vim \
+--exec-prefix=/mnt/projetos/shareapps/vim
+
+make VIMRUNTIMEDIR=/mnt/projetos/shareapps/vim/share/vim/vim81
+make install
+

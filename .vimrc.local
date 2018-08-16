@@ -65,6 +65,8 @@ end
 set mouse=a
 set ttyfast
 set clipboard=unnamedplus
+" set clipboard=unnamed
+" set clipboard=autoselect
 
 nmap <leader>l :set list!<CR>
 if v:version >= 74

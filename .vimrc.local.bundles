@@ -69,6 +69,9 @@ Plug 'Shougo/vimproc.vim'
 " Black
 Plug 'ambv/black'
 
+" py.test
+Plug 'alfredodeza/pytest.vim'
+
 " Ansible
 Plug 'MicahElliott/Rocannon'
 " Plug 'hejack0207/ansible.vim'

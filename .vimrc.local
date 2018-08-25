@@ -14,6 +14,13 @@ nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
 
+
+" Pytest
+nmap <silent><Leader>f <Esc>:Pytest file<CR>
+nmap <silent><Leader>c <Esc>:Pytest class<CR>
+nmap <silent><Leader>m <Esc>:Pytest method<CR>
+nmap <silent><Leader>p <Esc>:Pytest project<CR>
+
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -64,7 +71,8 @@ end
 " set mouse=n
 set mouse=a
 set ttyfast
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
+set clipboard^=unnamedplus
 " set clipboard=unnamed
 " set clipboard=autoselect
 

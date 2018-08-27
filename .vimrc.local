@@ -222,6 +222,9 @@ noremap <right> :echoerr 'use l to right'<CR>
 " inoremap <right> <ESC>:echoerr 'use l to right'<CR>
 " inoremap <ESC> <Nop>
 " expand('~/.vim/plugged')
+if filereadable(expand("~/.vim/.vimrc.local.bundles"))
+    source ~/.vim/.vimrc.local.bundles
+endif
 if filereadable(expand("~/.vimrc.common"))
     source ~/.vimrc.common
 endif

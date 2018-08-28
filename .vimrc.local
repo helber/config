@@ -37,6 +37,12 @@ autocmd FileType htmldjango set commentstring={#\ %s\ #}
 
 set cursorline
 
+" session management
+nnoremap <leader>so :OpenSession<Space>
+nnoremap <leader>ss :SaveSession<Space>
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
+
 " let g:jedi#force_py_version = 2
 if has("autocmd")
     filetype on
@@ -225,8 +231,8 @@ noremap <right> :echoerr 'use l to right'<CR>
 if filereadable(expand("~/.vim/.vimrc.local.bundles"))
     source ~/.vim/.vimrc.local.bundles
 endif
-if filereadable(expand("~/.vimrc.common"))
-    source ~/.vimrc.common
+if filereadable(expand("~/.vim/.vimrc.common"))
+    source ~/.vim/.vimrc.common
 endif
 
 " include vimrc project file

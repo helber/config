@@ -46,10 +46,18 @@ nnoremap <leader>sc :CloseSession<CR>
 " let g:jedi#force_py_version = 2
 if has("autocmd")
     filetype on
+    " Spell
+    set spelllang=pt_br,en_us
+    let spell_language_list="brasileiro,american"
+    let spell_auto_type="md,txt,gitcommit"
+    au! BufNewFile,BufRead * let b:spell_language="brasileiro"
+    autocmd FileType tex setlocal spell
+    autocmd FileType gitcommit setlocal spell
+    autocmd FileType txt setlocal spell
     " yaml
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 et
-    " yaml
-    autocmd FileType md setlocal ts=2 sts=2 sw=2 et
+    " md
+    autocmd FileType md setlocal ts=2 sts=2 sw=2 et spell
     " autocmd FileType make setlocal ts=8 sts=8 sw=8 et
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et
     autocmd FileType html setlocal ts=4 sts=4 sw=4 et

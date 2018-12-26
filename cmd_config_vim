@@ -1,16 +1,18 @@
 #!/bin/bash
+
 ./configure \
 --with-features=huge \
 --enable-largefile=yes \
 --enable-cscope=yes \
---enable-pythoninterp=dynamic \
 --enable-multibyte \
---enable-gui=gnome3 \
 --with-x=yes \
---with-tlib=ncurses \
---enable-python3interp=dynamic \
+--enable-python3interp \
+--enable-pythoninterp \
 --enable-terminal \
 --enable-gtk3-check \
+--enable-gui=gnome3 \
+--enable-luainterp \
+--enable-fail-if-missing \
 --prefix=/mnt/projetos/shareapps/vim \
 --exec-prefix=/mnt/projetos/shareapps/vim
 

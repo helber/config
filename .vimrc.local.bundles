@@ -73,7 +73,7 @@ Plug 'ambv/black'
 Plug 'alfredodeza/pytest.vim'
 
 " Ansible
-Plug 'MicahElliott/Rocannon'
+" Plug 'MicahElliott/Rocannon'
 " Plug 'hejack0207/ansible.vim'
 
 

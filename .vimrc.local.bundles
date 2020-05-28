@@ -69,12 +69,6 @@ Plug 'ambv/black'
 Plug 'alfredodeza/pytest.vim'
 
 " Ansible
-" Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
-" Plug 'chase/vim-ansible-yaml'
-" Plug 'MicahElliott/Rocannon'
-" Plug 'hejack0207/ansible.vim'
-Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
-
 
 " Vim completor
 " Plug 'maralla/completor.vim'

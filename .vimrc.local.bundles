@@ -52,11 +52,7 @@ Plug 'xuhdev/syntax-dosini.vim'
 " Plug 'tweekmonster/django-plus.vim'
 
 " Terraform
-Plug 'hashivim/vim-terraform'
-
-" Ansible
-" Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
-" Plug 'chase/vim-ansible-yaml'
+" Plug 'hashivim/vim-terraform'
 
 " Vim-move
 Plug 'matze/vim-move'
@@ -73,11 +69,18 @@ Plug 'ambv/black'
 Plug 'alfredodeza/pytest.vim'
 
 " Ansible
-Plug 'MicahElliott/Rocannon'
+" Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; python2 generate.py' }
+" Plug 'chase/vim-ansible-yaml'
+" Plug 'MicahElliott/Rocannon'
 " Plug 'hejack0207/ansible.vim'
+Plug 'pearofducks/ansible-vim', { 'do': 'cd ./UltiSnips; ./generate.py' }
 
 
 " Vim completor
 " Plug 'maralla/completor.vim'
+
+" COC
+" https://github.com/neoclide/coc.nvim
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 
 " Plug 'prabirshrestha/asyncomplete.vim'

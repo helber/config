@@ -40,7 +40,7 @@ Plug 'tpope/vim-surround'
 Plug 'qpkorr/vim-bufkill'
 
 " vim-json
-Plug 'elzr/vim-json'
+" Plug 'elzr/vim-json'
 
 " dos ini files
 Plug 'xuhdev/syntax-dosini.vim'
@@ -63,7 +63,7 @@ Plug 'Shougo/vimshell.vim'
 Plug 'Shougo/vimproc.vim'
 
 " Black
-Plug 'ambv/black'
+" Plug 'ambv/black'
 
 " py.test
 Plug 'alfredodeza/pytest.vim'
@@ -75,6 +75,12 @@ Plug 'alfredodeza/pytest.vim'
 
 " COC
 " https://github.com/neoclide/coc.nvim
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+
+" Use release branch (Recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Or build from source code by use yarn: https://yarnpkg.com
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 " Plug 'prabirshrestha/asyncomplete.vim'

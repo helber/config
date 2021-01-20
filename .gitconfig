@@ -23,7 +23,7 @@
 [user]
     name = Helber Maciel Guerra
     editor = vim
-	email = helber.guerra@gmail.com
+	email = helber.guerra@ahgora.com.br
 [alias]
     s = status
     b = branch -v
@@ -44,3 +44,5 @@
     host = review.openstack.org
     port = 29418
     user = helber
+[pull]
+	rebase = false

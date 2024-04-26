@@ -1,1 +1,24 @@
-Linux/OS X configuration files for vim, bash, screen etc
+# Linux/OS X configuration files for vim, bash, screen etc
+
+## SSH-AGENT
+https://unix.stackexchange.com/questions/339840/how-to-start-and-use-ssh-agent-as-systemd-service
+
+```
+# file: ~/.config/systemd/user/ssh-agent.service
+[Unit]
+Description=SSH key agent
+
+[Service]
+Type=simple
+Environment=SSH_AUTH_SOCK=%t/ssh-agent.socket
+ExecStart=/usr/bin/ssh-agent -D -a $SSH_AUTH_SOCK
+
+[Install]
+WantedBy=default.target
+
+# file: ~/.config/environment.d/ssh_auth_socket.conf
+SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+```
+
+
+
